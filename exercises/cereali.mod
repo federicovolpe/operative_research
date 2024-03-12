@@ -1,40 +1,53 @@
-# 	dati
-param num_lotti;
-param num_cereali;
+# DATI
+param nTerreni;
+param nCereali;
+set terreni := 1..nTerreni;					# terreni in cui poter coltivare
+param aree {terreni};						# aree dei rispettivi terreni [a]
+set cereali := 1..nCereali;					# tipi di cereali
+param profitti {cereali};					# profitti per ogni cereale [€/q]
+param necessita_acqua {cereali};			# acqua necessitata per ogni cereale [mc]
+param necessita_terreno {terreni, cereali};	# necessità di terreno per cereale [a]
+param max_acqua;							# totale di acqua disponibile [mc]
 
-set lotti := 1..num_lotti;
-set cereali := 1..num_cereali;
+# VARIABILI
+var produzione {terreni, cereali} >= 0;
 
-param necessita_terreno {lotti, cereali};
-param prezzo {cereali};
-param necessita_acqua {cereali}; 
+# VINCOLI
+subject to area_necessaria {t in terreni}:
+	sum {c in cereali} produzione[t, c] * necessita_terreno[t, c] <= aree[t];
 
-param aree_lotti {lotti};
-param acqua_tot;
+subject to acqua_necessaria :
+	sum{c in cereali, t in terreni} produzione[t, c] * necessita_acqua[c] <= max_acqua;
 
-#	variabili
-var quantita_prodota {cereali} >=0; # la produzione di ogni cereale non puo essere negativa
-
-#	vincoli
-
-# 	obiettivo
-# massimizzare la somma del profitto di ongni cereale per il quanto ne e' stato coltivato
-maximize z : 
-	sum (i in cereali) prezzo[i] * quantita_prodotta[i];
+# OBIETTIVO
+maximize z: 
+	sum{c in cereali, t in terreni} produzione[t, c] * profitti[c];
 
 data;
 
-param num_lotti := 2;
-param num_cereali := 6;
+param nTerreni := 2;
+param aree := 	1 200 
+				2 400;
+param nCereali := 6;
+param profitti := 1 48 
+				2 62 
+				3 28 
+				4 36 
+				5 122 
+				6 94 ;
+param necessita_acqua := 1 120 
+						2 160 
+						3 100 
+						4 140 
+						5 215 
+						6 180 ;
 
-param necessita_acqua := 120  160   100   140   215   180;
-param prezzo :=	48 	 62	   28 	 36    122 	 94;
+param necessita_terreno :	1		2		3		4		5		6 :=
+						1	0.02 	0.03 	0.02 	0.016 	0.05 	0.04
+						2	0.02 	0.034 	0.024 	0.02 	0.06 	0.034;
 
-param necessita_terreno : 	1	 2	   3	   4 	 5 	  6   :=
-1	0.02 0.03  0.02  0.016 0.05  0.04
-2	0.02 0.034 0.024 0.02  0.03  0.034;
-param aree_lotti := 200 400;
-
-param acqua_tot := 400000;
+param max_acqua :=  400000 ;
 
 end;
+
+# risultato:  OPTIMAL : 226976.7441860465
