@@ -1,54 +1,62 @@
-# DATI
-param numOrgani;
-param numPosizioni;
-set organi := 1..numOrgani;				# organi coinvolti
-set posizioni := 1..numPosizioni;		# posizioni posssibili
-param posizione_limite {posizioni};		# limite di radiazioni erogabile per ogni posizione
-param organo_limite {organi};			# limite di radiazioni ricevibili per ogni organo
-param maxRadiazioni;					# Gray massimo di radiazioni erogabili
-param mRadiazioni {posizioni, organi};	# matrice delle radiazioni su ogni organo per ogni posizione
+#	DATI
+set organi := 1..8;						# set degli organi (il primo è il tumore)
+set posizioni := 1..5;					# postazioni da cui emettere le radiazioni
+param lim_rad := 60;					# radiazioni totali [Gray]
+param radiazioni {organi, posizioni};	# percentuali di radiaizoni subite [%]
+param lim_pos {posizioni};				# limite di radiazioni emanabili per pos [Gray]
+param lim_org {organi};					# limite di radiazioni ricevibili per org [Gray]
 
-# VARIABILI
-# quantità di radiazioni da emanare per ogni posizione >= 0
-var emesse {posizioni} >= 0;
+#	VARIABILI
+# radiazioni che vengono emanate per ogni posizione
+var emanate {posizioni} >= 0;
 
-# VINCOLI
-subject to max_emesse :
-	sum{p in posizioni} emesse[p] <= 60;
+#	VINCOLI
+# il totale delle radiazioni emanate non può essere superiore al limite
+subject to limite_emanate :
+	sum {p in posizioni} emanate[p] <= lim_rad;
 
-subject to max_radiazioni_posizione {p in posizioni} :
-    emesse[p] <= posizione_limite[p];
+# limite delle radiazioni emanate per ogni posizione
+subject to limite_posizioni {p in posizioni}:
+	 emanate[p] <= lim_pos[p];
 
-subject to max_radiazioni_organo {o in organi} :
-	sum{p in posizioni} mRadiazioni[p, o] <= organo_limite[o];
+# le radiazioni subite da ogni organo devono essere inferiori al limite
+# radiazioni subite = somma delle emanate da ogni posizione
+subject to limite_subite_organi {o in organi}:
+	sum {p in posizioni} (emanate[p] * radiazioni[o, p]) <= lim_org[o];
 
-# OBIETTIVO
+#	OBIETTIVO
+# massimizzazione delle radiazioni subite dal tumore
+# ovvero la somma delle radiazioni ricevute dal tumore considerado
+# quante ne sono state emanate per ogni posizione
+maximize z : 
+	sum {p in posizioni} (emanate[p] * radiazioni[1, p]);
 
 data;
+param lim_pos :=
+1 	12
+2 	13
+3 	10
+4 	15
+5 	15;
 
-param numOrgani := 8;
-param numPosizioni := 5;
+param lim_org :=
+1	670
+2	5.5
+3	9.0
+4 	6.0
+5 	2.4
+6 	7.0
+7 	5.5
+8 	9.5;
 
-param posizione_limite := 1 12 2 13 3 10 4 15 5 15;
-
-param organo_limite :=  1	5.5
-                      2	9.0
-                      3	6.0
-                      4	2.4
-                      5	7.0
-                      6	5.5
-                      7	9.5;
-
-param maxRadiazioni := 60;
-
-param mRadiazioni :	1	2	3	 	4		5 :=
-				0	0.4	0.3	0.25 	0.7		0.5	
-				1	0.1	0.0	0.0		0.1		0.2
-				2	0.1	0.0	0.15	0.0		0.1
-				3	0.0	0.1	0.0		0.0		0.0
-				4	0.0	0.2	0.1		0.1		0.0
-				5	0.1	0.0	0.2		0.0		0.1
-				6	0.1	0.3	0.15	0.1		0.1
-				7	0.2	0.1	0.15	0.0		0.0;					
+param radiazioni:1	2	3	4	5 :=
+1				.4	.3	.25	.7	.5
+2				.1	0	0	.1	.2
+3				.1	0	.15	0	.1
+4				0	.1	0	0	0
+5				0	.2	.1	.1	0
+6				.1	0	.2	0	.1
+7				.1	.3	.15	.1	.1
+8				.2	.1	.15	0	0;
 
 end;
