@@ -1,24 +1,25 @@
 # DATI
 set caramelle := {"Dolce", "Delizia", "Bacetto", "Golosa", "Sfizio", "Slurp", "Sweety"};
 set ingredienti := {"Fruttosio", "Saccarosio", "Glucosio", "Destrosio", "Estratti di erbe", "Estratti di frutta", "Coloranti", "Conservanti", "Aromatizzanti"};
-param proporzioni {ingredienti, caramelle};
-param disponibilita {ingredienti};
-param costi {ingredienti};
-param prezzi {caramelle};
+param proporzioni {ingredienti, caramelle};	# coefficienti tecnologici
+param disponibilita {ingredienti};		# disponibilità degli ingredienti [kg/g]
+param costi {ingredienti};			# costi degli ingredienti 	[€/kg]
+param prezzi {caramelle};			# prezzi delle caramelle	 [€/kg]
 
 # VARIABILI
 # numero di caramelle prodotte per ogni tipo
-var prodotte {caramelle} >= 0;
+var prodotte {caramelle} >= 0;	# [kg]
+var consumo {i in ingredienti} >=0, <= disponibilita[i];
 
 # VINCOLI
 #1 non eccedere gli ingredienti disponibili per la produzione
 subject to limite_scorte {i in ingredienti} :
-	sum {c in caramelle} proporzioni[i,c]/100 * prodotte[c] <= disponibilita[i];
+	sum {c in caramelle} proporzioni[i,c]/100 * prodotte[c] <= consumo[i];
 
 # OBIETTIVO
 # massimizzare i guadagni
 maximize z : 
-	sum {c in caramelle} prodotte[c] * prezzi[c];
+	sum {c in caramelle} prodotte[c] * prezzi[c]  - sum{i in ingredienti} costi[i] * consumo[i];# consumo degli ingredienti
 
 data;
 
