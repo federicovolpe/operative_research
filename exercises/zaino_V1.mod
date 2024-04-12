@@ -37,3 +37,6 @@ param : volume valore :=
 12 52 25;
 
 end;
+
+soluzione :
+ottimo = 150;

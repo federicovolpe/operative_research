@@ -60,7 +60,7 @@ subject to consumi {m in materie} :
 	# le curve di livello sono come dei quadrati aperti sopra e a destra, punto F nelle slide
 	# non sa augurarsi se la legge passa o no ma non ha importanza
 
-#		CONSIGLIERE G: non si può linearizzare (fare max max)
+#		CONSIGLIERE G: non si puï¿½ linearizzare (fare max max)
 #	si immagina come possa essere posizionato il punto nelle slide
 #	sul solutore : si confrontano gli ottimi precedenti (il prof non lo spiega)
 

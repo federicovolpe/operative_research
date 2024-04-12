@@ -15,8 +15,9 @@ subject to Max_puntate :
 
 # obiettivi
 maximize z: aux;
-	subject to maxmin {i in Cavalli} :
-	aux <= (quotazione[i] * x[i]);
+	
+subject to maxmin {i in Cavalli} :
+aux <= (quotazione[i] * x[i]);
 
 data;
 
