@@ -60,8 +60,13 @@ Che relazione esiste tra i due problemi?
 
 guardare il file antritrust_domanda.mod
 
+il problema non consisterebbe più nel confrontare il fatturato per due
+prodotti ma confronterebbe il fatturato complessivo delle due aziende
 
+la soluzione ottima migliorerebbe = 90
 
-
+la seconda versione del problema risulterebbe un rilassamento della prima
+poichè la scelta dell'assegnamento non sarebbe limitata per ciascun
+prodotto ma nel campo complessivo dei guadagni
 
 

@@ -1,0 +1,38 @@
+Problem:    antitrust_domanda
+Rows:       3
+Columns:    11 (10 integer, 10 binary)
+Non-zeros:  23
+Status:     INTEGER OPTIMAL
+Objective:  complessivi = 90 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 deltaC1          -1.12801e+06  -1.12801e+06               
+     2 deltaC2           1.12819e+06   1.12801e+06               
+     3 complessivi                90                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 ass[1]       *              0             0             1 
+     2 ass[2]       *              1             0             1 
+     3 ass[3]       *              1             0             1 
+     4 ass[4]       *              1             0             1 
+     5 ass[5]       *              1             0             1 
+     6 ass[6]       *              0             0             1 
+     7 ass[7]       *              1             0             1 
+     8 ass[8]       *              0             0             1 
+     9 ass[9]       *              0             0             1 
+    10 ass[10]      *              0             0             1 
+    11 delta                      90             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
