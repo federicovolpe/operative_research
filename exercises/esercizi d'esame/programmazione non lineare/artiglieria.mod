@@ -2,13 +2,13 @@ reset;
 
 #	DATI
 param xp := 10000;
-param yp := 400;
+param yp := 350;
 
 param quota := 200; # quota dell'altopiano
 param xa := 11000;  # x di inizio dell'altopiano
 param vel := 100;  # velocità del proiettile [m/sec]
 param g := 9.8; 	# accelerazione di gravità [m/sec^2]	
-param xmax := 8500;	# massima ascissa consentita
+param xmax := 9500;	# massima ascissa consentita
 
 #	VARIABILI
 
@@ -44,3 +44,6 @@ maximize z :
 	x1 - x2;
 
 end;
+
+
+con i dati originali non è possibile scavalcare la cresta
