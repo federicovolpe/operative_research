@@ -83,9 +83,9 @@ param y (tr) :    0       1       2 :=
 
 # inizializzazione di a b c, se fossero 0 sarebbero rette degeneri
 var:	a	b	c :=
-0		1	1	1
-1		1	1	1	
-2		1	1	1	;
+0		.7	.7	0
+1		0	-1	1	
+2		-.7	.7	0	;
 
 end;
  
