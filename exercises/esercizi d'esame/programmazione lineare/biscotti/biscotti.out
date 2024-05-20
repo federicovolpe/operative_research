@@ -1,0 +1,40 @@
+Problem:    biscotti
+Rows:       3
+Columns:    4
+Non-zeros:  12
+Status:     OPTIMAL
+Objective:  guadagni = 897.5 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 tempoLim     B        7.81818                          60 
+     2 limBudget    B         2127.5                       21600 
+     3 guadagni     B          897.5                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 q[Svegliallegra]
+                    NU           300            50           300          0.45 
+     2 q[Frollino]  NU           500           100           500           0.3 
+     3 q[Alba]      NU          1000           500          1000         0.375 
+     4 q[ProntiVia] NU           500           300           500         0.475 
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 0.00e+00 on column 0
+        max.rel.err = 0.00e+00 on column 0
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

@@ -1,0 +1,39 @@
+GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    biscotti
+Objective:  guadagni = 897.5 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 tempoLim     BS       7.81818      52.18182          -Inf           -Inf     -74.25000     317.00000 q[Svegliallegra]
+                                            .           60.00000        7.81818          +Inf          +Inf
+
+     2 limBudget    BS    2127.50000   19472.50000          -Inf           -Inf       -.34615     161.05769 q[Svegliallegra]
+                                            .        21600.00000     2127.50000          +Inf          +Inf
+
+     3 guadagni     BS     897.50000    -897.50000          -Inf           -Inf      -1.00000        .      q[ProntiVia]
+                                            .               +Inf      897.50000          +Inf          +Inf
+
+GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    biscotti
+Objective:  guadagni = 897.5 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 q[Svegliallegra]
+                    NU     300.00000        .45000      50.00000           -Inf        .               -Inf
+                                            .45000     300.00000     8910.00000          +Inf    4772.00000 tempoLim
+
+     2 q[Frollino]  NU     500.00000        .30000     100.00000           -Inf        .               -Inf
+                                            .30000     500.00000    13545.45455          +Inf    4811.13636 tempoLim
+
+     3 q[Alba]      NU    1000.00000        .37500     500.00000           -Inf        .               -Inf
+                                            .37500    1000.00000    23254.28571          +Inf    9242.85714 limBudget
+
+     4 q[ProntiVia] NU     500.00000        .47500     300.00000           -Inf        .               -Inf
+                                            .47500     500.00000    13545.45455          +Inf    7094.09091 tempoLim
+
+End of report
