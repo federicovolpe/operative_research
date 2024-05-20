@@ -1,6 +1,6 @@
 reset;
 
-#	DATI
+#	DATI ------------------------------------------------------------------------------------------------------------
 set cent := 1..16; # numero di paesini / centraline / cabine
 param x {cent} ; # coordinate di ciascuna centralina
 param y {cent} ;
@@ -8,31 +8,25 @@ param maxdistance := 2; # km di massima distanza fra la cabina e la centralina
 
 param prec {cent};
 
-#	VARIABILI
+#	VARIABILI ------------------------------------------------------------------------------------------------------------
 var xc {c in cent} := x[c];	# coordinate delle cabine
 var yc {c in cent} := y[c];
 
-var aeree {cent} >= 0;		# distanze aeree fra la cabina e la precedente
+var aeree {c in cent} = sqrt((xc[prec[c]] - xc[c])^2 + (yc[prec[c]] - yc[c])^2);		# distanze aeree fra la cabina e la precedente
 
-#	VINCOLI
+#	VINCOLI ------------------------------------------------------------------------------------------------------------
 # le cabine devono trovarsi nel raggio di 2km dalle corrispettive centraline
 subject to distances {c in cent} :
 	((xc[c] - x[c])^2 + (yc[c] - y[c])^2) <= maxdistance^2;
 	
 
-subject to line_aeree {c in cent} :
-	aeree[c]^2 = (xc[prec[c]] - xc[c])^2 + (yc[prec[c]] - yc[c])^2; 
+#	OBIETTIVO ------------------------------------------------------------------------------------------------------------
 
-#	OBIETTIVO
-# Tizio sostiene che sia necessario minimizzare la lunghezza complessiva delle linee interrate
-minimize tizio :
-	sum {c in cent} ((xc[c] - x[c])^2 + (yc[c] - y[c])^2);
-	
 # Caio sostiene che sia necessario minimizzare la lunghezza complessiva dei cavi ad alta tensione
-#minimize caio:
-#	sum {c in cent : c <>1} ((xc[prec[c]] - xc[c])^2 + (yc[prec[c]] - yc[c])^2);
-	
-data;
+minimize caio:
+	sum {c in cent} aeree[c];
+
+data; # ------------------------------------------------------------------------------------------------------------
 
 # considerando un albero, dove ogni nodo conosce il padre
 param  prec :=
@@ -72,27 +66,6 @@ param : x	y :=
 16		35	54;
 
 end;
-
-tizio:
-ampl: display xc, yc;
-:         xc             yc         :=
-1    -1.47986e-11   -2.95973e-11
-2     4              8
-3    10             12
-4    15             12
-5    22             28
-6    31             30
-7    40             34
-8    42             46
-9    50             50
-10   25             15
-11   32             15
-12   37             10
-13   46             13
-14   31             38
-15   28             45
-16   35             54
-le cabine vengono posizionate sulle centraline
 
 caio:
 ampl: display xc, yc;

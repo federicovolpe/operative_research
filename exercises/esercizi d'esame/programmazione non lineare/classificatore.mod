@@ -1,35 +1,46 @@
 reset;
 
-#	DATI
+#	DATI ------------------------------------------------------------------------------------
 param npunti := 20;
 set punti := 1..npunti;
-param x {punti};
-param y	{punti};
-param bool {punti};
+
+param x {punti};			# coordinate dei punti
+param y	{punti};			
+param bool {punti};			# valori di verità
 
 param M := 1000;
 
-#	VARIABILI
+#	VARIABILI ------------------------------------------------------------------------------------
 var a;
 var b;
 var c;
-var err {punti} binary ;
 
-#	VINCOLI
+var err {punti} binary ;
+var delta >= 0;
+
+#	VINCOLI ------------------------------------------------------------------------------------
 # nessuna retta degenere ammissibile
 subject to normalize :
 	a^2 + b^2 = 1;
 	
 # tutti i falsi stanno da un lato
 subject to false {p in punti : bool[p] = 0}:
-	(a * x[p]) + (b * y[p]) + c >= M * err[p];
+	(a * x[p]) + (b * y[p]) + c >= delta - M * err[p]; # per  rilevare la disattivazione del vincolo
 	
 subject to true {p in punti : bool[p] = 1}:
-	(a * x[p]) + (b * y[p]) + c <= M * err[p];
+	(a * x[p]) + (b * y[p]) + c <= - delta + M * err[p];
 
-#	OBIETTIVO
+#	OBIETTIVO ------------------------------------------------------------------------------------
+# minimizzazione dei punti fuori posto 
 minimize error:
 	sum {p in punti} err[p];
+
+
+# massimizzazione dell'errore minimo
+subject to outliers : 		# sostituzione del'obiettivo precedente con un vincolo
+	sum {p in punti} err[p] <= 5;
+	
+maximize d: delta;
 
 data;
 
@@ -61,10 +72,69 @@ var b = 1;
 var c = 1;
 
 end;
-Sono dati N oggetti. Ogni oggetto ha un insieme di tre attributi: 
-i primi due sono le coordinate in uno spazio Euclideo bidimensionale; 
-il terzo è un attributo di tipo logico, “vero” o “falso”. 
-Si vuole trovare la retta che separa i punti in due sottoinsiemi 
-in modo che tutti i punti “veri” giacciano da un lato e tutti i punti “falsi” 
-dall’altro rispetto alla retta. Se ciò non è possibile, si vuole comunque minimizzare 
-il numero di punti che cadono dalla parte sbagliata rispetto alla retta.
+
+1)
+ampl: display err;
+err [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+11  0
+12  0
+13  0
+14  0
+15  1
+16  1
+17  1
+18  1
+19  0
+20  1
+;
+
+ampl: display a, b, c;
+a = -0.691192
+b = 0.722671
+c = -22.0959
+
+ampl: display delta;
+delta = 0.0355629
+
+2) 
+ampl: display delta;
+delta = 0.0260291
+
+ampl: display err;
+err [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+11  0
+12  0
+13  0
+14  0
+15  1
+16  1
+17  1
+18  1
+19  0
+20  1
+;
+
+ampl: display a, b , c;
+a = -0.691835
+b = 0.722055
+c = -22.2264

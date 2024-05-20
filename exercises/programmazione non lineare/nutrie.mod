@@ -13,8 +13,10 @@ param PC := 3;									# numero di paesi concessi a ciascun cacciatore
 #	VARIABILI
 
 var assign {C, P} binary;
-var CxP {p in P} = sum {c in C} assign[c, p];	# numero di cacciatori per ciascun paese
-var n_cad {c in C} = sum {p in P} (pop[p] * assign[c, p] / CxP[p]);									# nutrie che spettano a ciascun cacciatore
+var CxP {p in P} = sum {c in C} assign[c, p];							# numero di cacciatori per ciascun paese
+
+var quota {p in P} = pop[p] / sum {c in C} assign[c,p];		# nutrie che spettano a ciascun cacciatore
+
 var massimo;
 
 #	VINCOLI
@@ -30,7 +32,7 @@ subject to almuno {p in P} :
 # minimizzare il massimo dei valori targ (ovvero il minimo numero di nutrie spettante ad un cacciatore)
 minimize z : massimo;
 
-subject to mas {c in C} : massimo >= n_cad[c];
+subject to mas {c in C} : massimo >= sum {p in P} (assign[c,p] * quota[p]);
 
 data;
 
