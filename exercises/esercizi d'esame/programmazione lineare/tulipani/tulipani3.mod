@@ -1,7 +1,7 @@
 #	DATI -----------------------------------------------------------
 # dimensioni del terreno
 param b := 100;
-param h := 50;
+#		param h := 50; l'altezza del canale diventa una variabilie
 set T := 1..5; # tipi di tulipani
 param bmin := 5; # metri di larghezza minimi
 
@@ -22,20 +22,30 @@ param CB := 5000;
 param naz {T};	# prezzo nazionale
 param esp {T};	# prezzo esportazione
 
+param CC := 50; # costo dei concimi (€/kg)
+
 #	VARIABILI -----------------------------------------------------------
-var p {T} >= bmin; # base della striscia di tulipano coltivata
-var e {T}; # altezza del rettangolo destinato all'esportazione
+var p {T} >= bmin; # area della striscia coltivata
+var Ae {T}; # area da esportare
+var r {T};      # ricavi totali per ciascun tulipano
+var c {T};      # costi totali per ciascun tulipano
 
 #	VICNOLI -----------------------------------------------------------
+subject to guadagni_per_tulipano {t in T}:
+    r[t] = (Ae[t] * esp[t]) + ((p[t]-Ae[t]) * naz[t]);
+    
+subject to costi_per_tulipano {t in T}:
+   c[t] = p[t] * CC * (NCA[t] + NCB[t]);
+
 # l'area totale coltivabile Ã¨ limitata
 subject to areaTot :
-	sum {t in T} p[t] <= b;
+	sum {t in T} p[t] / h <= b;
 
 # le esportazioni di ciascun tulipano devono risultare nelle percentuali
 subject to percentuali_esportazione_max {t in T} :
-	e[t] / h <= espmax[t];
+	Ae[t] <= espmax[t] * p[t];
 subject to percentuali_esportazione_min {t in T} :
-	e[t] / h >= espmin[t];
+	Ae[t] >= espmin[t] * p[t];
 
 # limiti di scorte utilizzabili
 subject to limiteAcqua :
@@ -48,8 +58,8 @@ subject to limiteCB :
 # 	OBIETTIVO -----------------------------------------------------------
 # massimizzazione dei profitti
 maximize guadagni :
-	sum {t in T} ((e[t] * h * esp[t]) + # dall'esportazione
-				(p[t] * (h - e[t]) * naz[t]));# dal m. nazionale
+	sum {t in T} (r[t] - c[t]); # dal m. nazionale
+    
 data;
 param : espmin  espmax :=
    1       .1   .4

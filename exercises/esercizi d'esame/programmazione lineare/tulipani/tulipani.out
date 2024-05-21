@@ -1,0 +1,97 @@
+Problem:    tulipani
+Rows:       25
+Columns:    20
+Non-zeros:  74
+Status:     OPTIMAL
+Objective:  guadagni = 3504.779412 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 guadagni_per_tulipano[1]
+                    NS             0            -0             =             1 
+     2 guadagni_per_tulipano[2]
+                    NS             0            -0             =             1 
+     3 guadagni_per_tulipano[3]
+                    NS             0            -0             =             1 
+     4 guadagni_per_tulipano[4]
+                    NS             0            -0             =             1 
+     5 guadagni_per_tulipano[5]
+                    NS             0            -0             =             1 
+     6 costi_per_tulipano[1]
+                    NS             0            -0             =            -1 
+     7 costi_per_tulipano[2]
+                    NS             0            -0             =            -1 
+     8 costi_per_tulipano[3]
+                    NS             0            -0             =            -1 
+     9 costi_per_tulipano[4]
+                    NS             0            -0             =            -1 
+    10 costi_per_tulipano[5]
+                    NS             0            -0             =            -1 
+    11 areaTot      B        1.68824                         100 
+    12 percentuali_esportazione_max[1]
+                    NU             0                          -0            30 
+    13 percentuali_esportazione_max[2]
+                    NU             0                          -0            30 
+    14 percentuali_esportazione_max[3]
+                    NU             0                          -0            35 
+    15 percentuali_esportazione_max[4]
+                    NU             0                          -0            25 
+    16 percentuali_esportazione_max[5]
+                    NU             0                          -0             5 
+    17 percentuali_esportazione_min[1]
+                    B            1.5            -0               
+    18 percentuali_esportazione_min[2]
+                    B           2.25            -0               
+    19 percentuali_esportazione_min[3]
+                    B        45.0882            -0               
+    20 percentuali_esportazione_min[4]
+                    B            2.5            -0               
+    21 percentuali_esportazione_min[5]
+                    B            2.5            -0               
+    22 limiteAcqua  NU         30000                       30000      0.155882 
+    23 limiteCA     B        2816.18                        3000 
+    24 limiteCB     B        4861.76                        5000 
+    25 guadagni     B        3504.78                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 Ac[1]        NL             5             5                    -44.1765 
+     2 Ac[2]        NL             5             5                    -20.3824 
+     3 Ac[3]        B        64.4118             5               
+     4 Ac[4]        NL             5             5                    -97.7941 
+     5 Ac[5]        NL             5             5                    -71.9853 
+     6 Ae[1]        B              2                             
+     7 Ae[2]        B              3                             
+     8 Ae[3]        B        48.3088                             
+     9 Ae[4]        B              5                             
+    10 Ae[5]        B            2.5                             
+    11 r[1]         B            360                             
+    12 r[2]         B            490                             
+    13 r[3]         B        9420.22                             
+    14 r[4]         B            500                             
+    15 r[5]         B          412.5                             
+    16 c[1]         B            425                             
+    17 c[2]         B            475                             
+    18 c[3]         B        5152.94                             
+    19 c[4]         B            950                             
+    20 c[5]         B            675                             
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 3.64e-12 on row 22
+        max.rel.err = 1.27e-16 on row 13
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 2.84e-14 on column 4
+        max.rel.err = 1.16e-16 on column 7
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
