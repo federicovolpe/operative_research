@@ -63,6 +63,17 @@ var :	a	b	c :=
 
 end;
  
+ 
+MINOS 5.51: optimal solution found.
+10 iterations, objective 205
+Nonlin evals: obj = 15, grad = 14, constrs = 15, Jac = 14.
+ampl: display a, b, c;
+:      a          b          c        :=
+0    0.83205    0.5547     6.93375
+1    0.5547    -0.83205    6.37905
+2   -0.83205   -0.5547    11.094
+3   -0.5547     0.83205    4.9923
+;
 Discussione:
 la soluzione trovata potrebbe non essere l'unica poiche'
 anche solo semplicemente applicando una rotazione al quadrato si potrebbero
