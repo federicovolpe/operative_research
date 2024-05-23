@@ -7,7 +7,7 @@ param y{punti};
 set lati := 0..3;
 
 #	VARIABILI
-# definizione delle 4 segmenti del rettangolo
+# variabili per la definizione delle 4 rette del rettangolo
 var a{lati};
 var b{lati};
 var c{lati};
@@ -21,6 +21,8 @@ subject to normalize {l in lati} :
 subject to perp0 {l1 in lati, l2 in lati : l2 = (l1 + 1) mod 4} :
 	a[l1]*a[l2] + b[l1]*b[l2] = 0;
 
+# vincoli per la direzione delle rette dato che i punti si dovranno trovare
+# tutti da un lato delle rette
 subject to perp1 :
 	a[0] = -a[2];
 subject to perp2 :
@@ -30,7 +32,7 @@ subject to perp3 :
 subject to perp4 :
 	b[1] = -b[3];
 	
-# tutti i punti devono trovarsi da un lato della retta (per due rette)
+# tutti i punti devono trovarsi da un lato di ogni retta (dato il suo verso)
 subject to up {p in punti, l in lati}:
 	a[l]*x[p] + b[l]*y[p] + c[l] >= 0;
 
@@ -61,8 +63,8 @@ var :	a	b	c :=
 
 end;
  
-Dato un insieme di N punti nel piano cartesiano, 
-si vuole trovare il rettangolo di minima area che li copre tutti.
-	
-N.B. Non è obbligatorio che il rettangolo abbia i lati 
-paralleli agli assi cartesiani.
+Discussione:
+la soluzione trovata potrebbe non essere l'unica poiche'
+anche solo semplicemente applicando una rotazione al quadrato si potrebbero
+scoprire nuovi minimi locali.
+non e' quindi detto che si tratti di un minimo globale
