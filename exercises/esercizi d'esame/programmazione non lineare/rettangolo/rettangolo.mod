@@ -23,13 +23,13 @@ subject to perp0 {l1 in lati, l2 in lati : l2 = (l1 + 1) mod 4} :
 
 # vincoli per la direzione delle rette dato che i punti si dovranno trovare
 # tutti da un lato delle rette
-subject to perp1 :
+subject to dir1 :
 	a[0] = -a[2];
-subject to perp2 :
+subject to dir2 :
 	b[0] = -b[2];
-subject to perp3 :
+subject to dir3 :
 	a[1] = -a[3];
-subject to perp4 :
+subject to dir4 :
 	b[1] = -b[3];
 	
 # tutti i punti devono trovarsi da un lato di ogni retta (dato il suo verso)
