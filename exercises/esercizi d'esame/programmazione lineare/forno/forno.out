@@ -1,0 +1,80 @@
+Problem:    forno
+Rows:       22
+Columns:    4
+Non-zeros:  40
+Status:     OPTIMAL
+Objective:  guadagni = 57.875 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 limit_production[Pane,Pane]
+                    B             -5                          -0 
+     2 limit_production[Pane,Biscotti]
+                    B       -6.66667                          -0 
+     3 limit_production[Pane,Focacce]
+                    B             -1                          -0 
+     4 limit_production[Pane,Paste]
+                    B      -0.833333                          -0 
+     5 limit_production[Biscotti,Pane]
+                    B       -4.16667                          -0 
+     6 limit_production[Biscotti,Biscotti]
+                    B       -5.83333                          -0 
+     7 limit_production[Biscotti,Focacce]
+                    B      -0.166667                          -0 
+     8 limit_production[Biscotti,Paste]
+                    NU             0                          -0       2.07143 
+     9 limit_production[Focacce,Pane]
+                    B             -7                          -0 
+    10 limit_production[Focacce,Biscotti]
+                    B       -8.66667                          -0 
+    11 limit_production[Focacce,Focacce]
+                    B             -3                          -0 
+    12 limit_production[Focacce,Paste]
+                    B       -2.83333                          -0 
+    13 limit_production[Paste,Pane]
+                    B       -7.08333                          -0 
+    14 limit_production[Paste,Biscotti]
+                    B          -8.75                          -0 
+    15 limit_production[Paste,Focacce]
+                    B       -3.08333                          -0 
+    16 limit_production[Paste,Paste]
+                    B       -2.91667                          -0 
+    17 fabbisogni_minimi[Pane]
+                    NL             5             5                   -0.714286 
+    18 fabbisogni_minimi[Biscotti]
+                    B        5.83333             2               
+    19 fabbisogni_minimi[Focacce]
+                    NL             3             3                    -5.23214 
+    20 fabbisogni_minimi[Paste]
+                    B        2.91667             2               
+    21 limit_spacetime
+                    NU            24                          24       3.21429 
+    22 guadagni     B         57.875                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 pro[Pane]    B              5                             
+     2 pro[Biscotti]
+                    B        5.83333                             
+     3 pro[Focacce] B              3                             
+     4 pro[Paste]   B        2.91667                             
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 0.00e+00 on column 0
+        max.rel.err = 0.00e+00 on column 0
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
