@@ -1,0 +1,88 @@
+Problem:    editoria
+Rows:       16
+Columns:    36 (36 integer, 36 binary)
+Non-zeros:  108
+Status:     INTEGER OPTIMAL
+Objective:  narticoli = 11 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 assegnamento[1]
+                                   1                           1 
+     2 assegnamento[2]
+                                   1                           1 
+     3 assegnamento[3]
+                                   1                           1 
+     4 assegnamento[4]
+                                   1                           1 
+     5 assegnamento[5]
+                                   0                           1 
+     6 assegnamento[6]
+                                   1                           1 
+     7 assegnamento[7]
+                                   1                           1 
+     8 assegnamento[8]
+                                   1                           1 
+     9 assegnamento[9]
+                                   1                           1 
+    10 assegnamento[10]
+                                   1                           1 
+    11 assegnamento[11]
+                                   1                           1 
+    12 assegnamento[12]
+                                   1                           1 
+    13 paginemax[1]               43                          44 
+    14 paginemax[2]               42                          44 
+    15 paginemax[3]               44                          44 
+    16 narticoli                  11                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 assign[1,1]  *              1             0             1 
+     2 assign[1,2]  *              0             0             1 
+     3 assign[1,3]  *              0             0             1 
+     4 assign[2,1]  *              1             0             1 
+     5 assign[2,2]  *              0             0             1 
+     6 assign[2,3]  *              0             0             1 
+     7 assign[3,1]  *              0             0             1 
+     8 assign[3,2]  *              1             0             1 
+     9 assign[3,3]  *              0             0             1 
+    10 assign[4,1]  *              1             0             1 
+    11 assign[4,2]  *              0             0             1 
+    12 assign[4,3]  *              0             0             1 
+    13 assign[5,1]  *              0             0             1 
+    14 assign[5,2]  *              0             0             1 
+    15 assign[5,3]  *              0             0             1 
+    16 assign[6,1]  *              1             0             1 
+    17 assign[6,2]  *              0             0             1 
+    18 assign[6,3]  *              0             0             1 
+    19 assign[7,1]  *              0             0             1 
+    20 assign[7,2]  *              0             0             1 
+    21 assign[7,3]  *              1             0             1 
+    22 assign[8,1]  *              1             0             1 
+    23 assign[8,2]  *              0             0             1 
+    24 assign[8,3]  *              0             0             1 
+    25 assign[9,1]  *              0             0             1 
+    26 assign[9,2]  *              0             0             1 
+    27 assign[9,3]  *              1             0             1 
+    28 assign[10,1] *              0             0             1 
+    29 assign[10,2] *              1             0             1 
+    30 assign[10,3] *              0             0             1 
+    31 assign[11,1] *              0             0             1 
+    32 assign[11,2] *              0             0             1 
+    33 assign[11,3] *              1             0             1 
+    34 assign[12,1] *              0             0             1 
+    35 assign[12,2] *              1             0             1 
+    36 assign[12,3] *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
