@@ -1,0 +1,117 @@
+Problem:    containers
+Rows:       17
+Columns:    66 (66 integer, 6 binary)
+Non-zeros:  132
+Status:     INTEGER OPTIMAL
+Objective:  containers = 6 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 assignment[1]
+                                  68            68             = 
+     2 assignment[2]
+                                  90            90             = 
+     3 assignment[3]
+                                  10            10             = 
+     4 assignment[4]
+                                  48            48             = 
+     5 assignment[5]
+                                  28            28             = 
+     6 assignment[6]
+                                  70            70             = 
+     7 assignment[7]
+                                  56            56             = 
+     8 assignment[8]
+                                  10            10             = 
+     9 assignment[9]
+                                  45            45             = 
+    10 assignment[10]
+                                  12            12             = 
+    11 cap_max[1]                -50                          -0 
+    12 cap_max[2]              -1100                          -0 
+    13 cap_max[3]                 -5                          -0 
+    14 cap_max[4]                -35                          -0 
+    15 cap_max[5]                -38                          -0 
+    16 cap_max[6]               -380                          -0 
+    17 containers                  6                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[1,1]       *              0             0               
+     2 x[1,2]       *              0             0               
+     3 x[1,3]       *              0             0               
+     4 x[1,4]       *              0             0               
+     5 x[1,5]       *              0             0               
+     6 x[1,6]       *             68             0               
+     7 x[2,1]       *              0             0               
+     8 x[2,2]       *              0             0               
+     9 x[2,3]       *             61             0               
+    10 x[2,4]       *             29             0               
+    11 x[2,5]       *              0             0               
+    12 x[2,6]       *              0             0               
+    13 x[3,1]       *              0             0               
+    14 x[3,2]       *              0             0               
+    15 x[3,3]       *             10             0               
+    16 x[3,4]       *              0             0               
+    17 x[3,5]       *              0             0               
+    18 x[3,6]       *              0             0               
+    19 x[4,1]       *              0             0               
+    20 x[4,2]       *              0             0               
+    21 x[4,3]       *              0             0               
+    22 x[4,4]       *             46             0               
+    23 x[4,5]       *              0             0               
+    24 x[4,6]       *              2             0               
+    25 x[5,1]       *              0             0               
+    26 x[5,2]       *             14             0               
+    27 x[5,3]       *             14             0               
+    28 x[5,4]       *              0             0               
+    29 x[5,5]       *              0             0               
+    30 x[5,6]       *              0             0               
+    31 x[6,1]       *             33             0               
+    32 x[6,2]       *              0             0               
+    33 x[6,3]       *              0             0               
+    34 x[6,4]       *             16             0               
+    35 x[6,5]       *             21             0               
+    36 x[6,6]       *              0             0               
+    37 x[7,1]       *              0             0               
+    38 x[7,2]       *              0             0               
+    39 x[7,3]       *              0             0               
+    40 x[7,4]       *              0             0               
+    41 x[7,5]       *             56             0               
+    42 x[7,6]       *              0             0               
+    43 x[8,1]       *              0             0               
+    44 x[8,2]       *              0             0               
+    45 x[8,3]       *              0             0               
+    46 x[8,4]       *              0             0               
+    47 x[8,5]       *              0             0               
+    48 x[8,6]       *             10             0               
+    49 x[9,1]       *              0             0               
+    50 x[9,2]       *             45             0               
+    51 x[9,3]       *              0             0               
+    52 x[9,4]       *              0             0               
+    53 x[9,5]       *              0             0               
+    54 x[9,6]       *              0             0               
+    55 x[10,1]      *              0             0               
+    56 x[10,2]      *              0             0               
+    57 x[10,3]      *              0             0               
+    58 x[10,4]      *              0             0               
+    59 x[10,5]      *             12             0               
+    60 x[10,6]      *              0             0               
+    61 uso[1]       *              1             0             1 
+    62 uso[2]       *              1             0             1 
+    63 uso[3]       *              1             0             1 
+    64 uso[4]       *              1             0             1 
+    65 uso[5]       *              1             0             1 
+    66 uso[6]       *              1             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

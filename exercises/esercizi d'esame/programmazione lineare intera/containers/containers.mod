@@ -1,38 +1,46 @@
-#		DATI	#############################################################
+# obiettivo : rilassamento del problema nel continuo 
+# per poter stimare il numero di containers e farsi una idea del problema se i containers
+# avessero tutti la stessa capacità
+
+#		DATI	#########################################
 param nt := 10;			# numero di tipi di oggetti
-set T := 1..nt;			# set dei tipi di oggetti
-param n {T};			# numero di oggetti per ogni tipo
-param v {T};			# volume di ogni tipo di oggetto
+set Togg := 1..nt;			# set dei tipi di oggetti
+param n {Togg};			# numero di oggetti per ogni tipo
+param v {Togg};			# volume di ogni tipo di oggetto
 
-param ccd := 5000;		# capacità dei container disponibili
-param cca := 3000;		# capacità dei container alternativi
+param cap := 5000; 		# capacità dei container (in questa versione solo di un tipo)
+param nc := ceil(sum {t in Togg}(v[t] * n[t]) /cap); 			# numero di containers necessari
+set C := 1..nc;			# set dei di containers
 
-param nc := 3; 			# numero di tipi di containers
-set C := 1..nc;			# set dei tipi di containers
-param cap {C}; 			# capacità di ogni tipo di container
 
-# 		VARIABILI	##########################################################
+# 		VARIABILI	#######################################
 # assegnamento di ogni prodotto ad un determinato container
-var 
+var x {Togg,C} integer, >= 0;       # n. di oggetti per ogni container
+var uso {C} binary;     # utilizzo di ogni container
 
-#		VINCOLI	##########################################################
+#		VINCOLI	########################################
+# per ogni tipo di oggetto devono essere assegnati un numero pari a quanti ce ne sono
+subject to assignment {t in Togg} :
+  sum {c in C} x[t,c] = n[t]
+; 
+
 # il volume totale degli oggetti contenuti in un container non deve eccedere la sua capacità
-subject to cap_max :
-	sum {t in T} v[t] <= cap[c]
+subject to cap_max {c in C} : 
+	sum {t in Togg} v[t] * x[t, c] <= cap * uso[c]
 ;
 
-#		OBIETTIVO	##########################################################
+#		OBIETTIVO	######################################
 # minimizzazione del numero di containers utilizzati
 minimize containers :
-	sum[c in C ]
+	sum{c in C} uso[c]
 ;
 
 data;
 
-param cap :=
-1		5000
-2		3000
-3		4000;
+#param cap :=
+#1		5000
+#2		3000
+#3		4000;
 
 param : 	 n 				  v :=
   1          68               30
