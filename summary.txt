@@ -1,0 +1,6 @@
+PL:
+forno : massimizzazione dei guadagni con diverse produzioni
+
+PLI:
+containers: data la capacità di diverse knapsack utilizzare il minor numero di knapsack per contenere tutti gli oggetti 
+editoria : 
