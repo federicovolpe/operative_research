@@ -29,6 +29,12 @@ subject to cap_max {c in C} :
 	sum {t in Togg} v[t] * x[t, c] <= cap * uso[c]
 ;
 
+# vincolo di simmetria per riempire per primi i primi containers
+subject to symm1 {c in C : c >1}:
+  use[c] <= use[c-1];
+subject to symm2 {c in C : c >1}:
+  sum{t in Togg} v[t] * x[t,c] <= sum{t in Togg} v[t] * x[t,c-1];
+
 #		OBIETTIVO	######################################
 # minimizzazione del numero di containers utilizzati
 minimize containers :
