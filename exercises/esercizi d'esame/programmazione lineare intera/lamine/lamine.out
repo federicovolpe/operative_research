@@ -1,0 +1,94 @@
+Problem:    lamine
+Rows:       17
+Columns:    40 (40 integer, 4 binary)
+Non-zeros:  134
+Status:     INTEGER EMPTY
+Objective:  z = 0 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 assegnamento_larghezza[1]
+                                   0                          -0 
+     2 assegnamento_larghezza[2]
+                                   0                          -0 
+     3 assegnamento_larghezza[3]
+                                   0                          -0 
+     4 assegnamento_larghezza[4]
+                                   0                          -0 
+     5 lamine_richieste[1]
+                                   0             3             = 
+     6 lamine_richieste[2]
+                                   0             2             = 
+     7 lamine_richieste[3]
+                                   0             1             = 
+     8 lamine_richieste[4]
+                                   0             2             = 
+     9 lamine_richieste[5]
+                                   0             3             = 
+    10 lamine_richieste[6]
+                                   0             1             = 
+    11 lamine_richieste[7]
+                                   0             2             = 
+    12 lamine_richieste[8]
+                                   0             1             = 
+    13 lamine_richieste[9]
+                                   0             1             = 
+    14 symm[2]                     0                          -0 
+    15 symm[3]                     0                          -0 
+    16 symm[4]                     0                          -0 
+    17 z                           0                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 assign[1,1]  *              0             0               
+     2 assign[1,2]  *              0             0               
+     3 assign[1,3]  *              0             0               
+     4 assign[1,4]  *              0             0               
+     5 assign[1,5]  *              0             0               
+     6 assign[1,6]  *              0             0               
+     7 assign[1,7]  *              0             0               
+     8 assign[1,8]  *              0             0               
+     9 assign[1,9]  *              0             0               
+    10 assign[2,1]  *              0             0               
+    11 assign[2,2]  *              0             0               
+    12 assign[2,3]  *              0             0               
+    13 assign[2,4]  *              0             0               
+    14 assign[2,5]  *              0             0               
+    15 assign[2,6]  *              0             0               
+    16 assign[2,7]  *              0             0               
+    17 assign[2,8]  *              0             0               
+    18 assign[2,9]  *              0             0               
+    19 assign[3,1]  *              0             0               
+    20 assign[3,2]  *              0             0               
+    21 assign[3,3]  *              0             0               
+    22 assign[3,4]  *              0             0               
+    23 assign[3,5]  *              0             0               
+    24 assign[3,6]  *              0             0               
+    25 assign[3,7]  *              0             0               
+    26 assign[3,8]  *              0             0               
+    27 assign[3,9]  *              0             0               
+    28 assign[4,1]  *              0             0               
+    29 assign[4,2]  *              0             0               
+    30 assign[4,3]  *              0             0               
+    31 assign[4,4]  *              0             0               
+    32 assign[4,5]  *              0             0               
+    33 assign[4,6]  *              0             0               
+    34 assign[4,7]  *              0             0               
+    35 assign[4,8]  *              0             0               
+    36 assign[4,9]  *              0             0               
+    37 use[1]       *              0             0             1 
+    38 use[2]       *              0             0             1 
+    39 use[3]       *              0             0             1 
+    40 use[4]       *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 3.00e+00 on row 5
+        max.rel.err = 7.50e-01 on row 5
+        SOLUTION IS INFEASIBLE
+
+End of output
