@@ -1,0 +1,73 @@
+GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    botanica2
+Objective:  guadagni = 18497781.16 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 max_terreno_coltivabile
+                    NU     500.00000        .               -Inf      500.00000   -2500.00000   1.84978e+07 qt[F]
+                                        2500.00000     500.00000      600.00000          +Inf   1.87478e+07 max_per_pianta[F]
+
+     2 max_per_pianta[A]
+                    NU     100.00000        .               -Inf         .       -27500.00000   1.57478e+07 max_per_pianta[F]
+                                       27500.00000     100.00000      100.00000          +Inf   1.84978e+07 qt[F]
+
+     3 max_per_pianta[B]
+                    NU     100.00000        .               -Inf         .       -17500.00000   1.67478e+07 max_per_pianta[F]
+                                       17500.00000     100.00000      100.00000          +Inf   1.84978e+07 qt[F]
+
+     4 max_per_pianta[C]
+                    NU     100.00000        .               -Inf         .        -7500.00000   1.77478e+07 max_per_pianta[F]
+                                        7500.00000     100.00000      100.00000          +Inf   1.84978e+07 qt[F]
+
+     5 max_per_pianta[D]
+                    NU     100.00000        .               -Inf         .       -87500.00000   9.74778e+06 max_per_pianta[F]
+                                       87500.00000     100.00000      100.00000          +Inf   1.84978e+07 qt[F]
+
+     6 max_per_pianta[E]
+                    BS        .          100.00000          -Inf         .               -Inf   1.84978e+07
+                                            .          100.00000         .         2000.00000   1.84978e+07 qt[E]
+
+     7 max_per_pianta[F]
+                    BS        .          100.00000          -Inf         .        -2000.00000   1.84978e+07 qt[E]
+                                            .          100.00000      100.00000    7500.00000   1.84978e+07 max_per_pianta[C]
+
+     8 max_per_pianta[G]
+                    NU     100.00000        .               -Inf         .       -32500.00000   1.52478e+07 max_per_pianta[F]
+                                       32500.00000     100.00000      100.00000          +Inf   1.84978e+07 qt[F]
+
+     9 guadagni     BS      1.85e+07     -1.85e+07          -Inf       9.75e+06      -1.00000   -2218.84000 max_per_pianta[D]
+                                            .               +Inf       1.85e+07          +Inf          +Inf
+
+GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    botanica2
+Objective:  guadagni = 18497781.16 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 qt[A]        BS     100.00000   30000.00000        .              .         2500.00000   1.57478e+07 max_per_pianta[A]
+                                            .               +Inf      100.00000          +Inf          +Inf
+
+     2 qt[B]        BS     100.00000   20000.00000        .              .         2500.00000   1.67478e+07 max_per_pianta[B]
+                                            .               +Inf      100.00000          +Inf          +Inf
+
+     3 qt[C]        BS     100.00000   10000.00000        .              .         2500.00000   1.77478e+07 max_per_pianta[C]
+                                            .               +Inf      100.00000          +Inf          +Inf
+
+     4 qt[D]        BS     100.00000   90000.00000        .              .         2500.00000   9.74778e+06 max_per_pianta[D]
+                                            .               +Inf      100.00000          +Inf          +Inf
+
+     5 qt[E]        NL        .          500.00000        .          -100.00000          -Inf   1.86978e+07 max_per_pianta[F]
+                                       -2000.00000          +Inf         .         2500.00000   1.84978e+07 qt[F]
+
+     6 qt[F]        BS        .         2500.00000        .          -100.00000     500.00000   1.84978e+07 qt[E]
+                                            .               +Inf      100.00000   10000.00000   1.84978e+07 max_per_pianta[C]
+
+     7 qt[G]        BS     100.00000   35000.00000        .              .         2500.00000   1.52478e+07 max_per_pianta[G]
+                                            .               +Inf      100.00000          +Inf          +Inf
+
+End of report
