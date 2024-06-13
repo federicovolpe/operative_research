@@ -25,7 +25,7 @@ param esp {T};	# prezzo esportazione
 param CC := 50; # costo dei concimi [€/kg]
 
 #	VARIABILI -----------------------------------------------------------
-var Ac{T} >= bmin;  # area della striscia coltivata
+var Ac{T} >= 5 ;  # area della striscia coltivata
 var Ae{T};          # area da esportare
 var r {T};          # ricavi totali per ciascun tulipano
 var c {T};          # costi totali per ciascun tulipano
