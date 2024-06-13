@@ -1,6 +1,8 @@
 PL:
 forno : massimizzazione dei guadagni con diverse produzioni
+cuori solitari: massimizzazione del minimo di una matrice doppia
 
 PLI:
 containers: data la capacità di diverse knapsack utilizzare il minor numero di knapsack per contenere tutti gli oggetti 
-editoria : 
+editoria : ad ogni knapsack attribuire un numero intero di elementi
+lamine : esercizio non riuscito, knapsack per n knapsack
