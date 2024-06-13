@@ -1,0 +1,73 @@
+Problem:    merendine
+Rows:       16
+Columns:    10
+Non-zeros:  63
+Status:     OPTIMAL
+Objective:  z = 22863.15789 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 ingredienti[pasta]
+                    B        1311.58                       1e+07 
+     2 ingredienti[zucchero]
+                    NU           300                         300            40 
+     3 ingredienti[marmellata]
+                    B        309.474                         320 
+     4 ingredienti[cioccolato]
+                    NU           240                         240       45.2632 
+     5 ingredienti[acqua]
+                    B        843.158                       1e+07 
+     6 biscottiNS   B       -189.474                          -0 
+     7 biscottiNS2  NL             0            -0                    -12.1053 
+     8 avanzi_def[pasta]
+                    NS             1             1             =         < eps
+     9 avanzi_def[zucchero]
+                    NS             1             1             =         < eps
+    10 avanzi_def[marmellata]
+                    NS             1             1             =         < eps
+    11 avanzi_def[cioccolato]
+                    NS             1             1             =         < eps
+    12 avanzi_def[acqua]
+                    NS             1             1             =         < eps
+    13 avanziz      B              0                          30 
+    14 avanzim      B      0.0328947                          32 
+    15 avanzic      B              0                          24 
+    16 z            B        22863.2                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 x[merendine] NL             0             0                    -6.52632 
+     2 x[brioches]  B        989.474             0               
+     3 x[biscottiN] B        1263.16             0               
+     4 x[biscottiS] B        126.316             0               
+     5 x[tortine]   NL             0             0                    -15.5789 
+     6 avanzi[pasta]
+                    B       0.999869                             
+     7 avanzi[zucchero]
+                    B              0                             
+     8 avanzi[marmellata]
+                    B      0.0328947                             
+     9 avanzi[cioccolato]
+                    B              0                             
+    10 avanzi[acqua]
+                    B       0.999916                             
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 5.68e-14 on row 2
+        max.rel.err = 9.46e-17 on row 2
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 3.55e-15 on column 4
+        max.rel.err = 7.11e-17 on column 3
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
