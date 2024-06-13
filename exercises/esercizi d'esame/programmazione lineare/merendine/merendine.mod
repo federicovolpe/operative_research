@@ -6,15 +6,17 @@ param prezzi {P};		# prezzo di ciascun prodotto [Euro/Kg]
 param comp {I,P};		# composizione percentuale dei prodotti [%]
 param disp {I};			# disponibilità di ciascun ingrediente [Kg/g]
 
+set conf ;				# set dei tipi di confezioni
+
 #	VARIABILI 	######################################
 var x {P} >= 0 ; 		# quantità prodotta per ciascun prodotto
 var avanzi {I};		# quantità di avanzi per ogni ingrediente
 
 #	VINCOLI	######################################
 # la somma dell'utilizzo di ogni ingrediente non deve eccedere la disponibilità di questo
-subject to ingredienti {i in I} :
-	sum{p in P} (x[p] * comp[i,p]) <= disp[i]
-;
+#subject to ingredienti {i in I} :
+#	sum{p in P} (x[p] * comp[i,p]) <= disp[i]
+#;
 #La produzione di biscotti speciali deve essere compresa tra il 10% e il 25% della produzione di biscotti normali.
 subject to biscottiNS :
 	x['biscottiS'] <= .25 * x['biscottiN'] ;
@@ -30,6 +32,12 @@ subject to avanziz : avanzi['zucchero'] <= .1 * disp['zucchero'] ;
 subject to avanzim : avanzi['marmellata'] <= .1 * disp['marmellata'] ;
 subject to avanzic : avanzi['cioccolato'] <= .1 * disp['cioccolato'] ;
 
+#Il totale di prodotti venduti in confezioni grandi deve essere compreso tra il 40% e il 60% del totale.
+#Il vincolo deve essere rispettato sia per ogni tipo di prodotto sia complessivamente.
+subject to conf_grandi {c in conf}:
+	sum{p in P} 
+;
+
 #	OBIETTIVO 	######################################
 # massimizzazione dei guadagni
 maximize z:
@@ -40,6 +48,7 @@ data;
 
 set P := merendine brioches biscottiN biscottiS tortine;
 set I := pasta zucchero marmellata cioccolato acqua;
+set conf := conf_g conf_p;
 
 param prezzi :=
 merendine      8
@@ -63,18 +72,11 @@ marmellata 320
 cioccolato 240
 acqua      10000000;
 
-
-
-
-
-#Il totale di prodotti venduti in confezioni grandi deve essere compreso tra il 40% e il 60% del totale.
-#Il vincolo deve essere rispettato sia per ogni tipo di prodotto sia complessivamente.
-
 #Ciascun tipo di prodotto deve costituire almeno il 10% della produzione totale.
 
 #La produzione attuale è la seguente:
 
-#    Prodotto  Merend.  Brioc.  Bisc.   Bisc.++  Tort.
+#    Prodotto  merendine brioches biscottiN biscottiS tortine
 #Conf. piccola   250     60      180      60      70
 #Conf. grande    350     90      250      90      90
 
