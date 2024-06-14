@@ -1,0 +1,347 @@
+Problem:    percorso
+Rows:       17
+Columns:    256 (256 integer, 256 binary)
+Non-zeros:  706
+Status:     INTEGER OPTIMAL
+Objective:  rischio = 14 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 conservazione_di_flusso[1]
+                                   0            -0             = 
+     2 conservazione_di_flusso[2]
+                                   0            -0             = 
+     3 conservazione_di_flusso[3]
+                                   0            -0             = 
+     4 conservazione_di_flusso[4]
+                                   0            -0             = 
+     5 conservazione_di_flusso[5]
+                                   0            -0             = 
+     6 conservazione_di_flusso[6]
+                                   0            -0             = 
+     7 conservazione_di_flusso[7]
+                                   0            -0             = 
+     8 conservazione_di_flusso[8]
+                                   0            -0             = 
+     9 conservazione_di_flusso[9]
+                                   0            -0             = 
+    10 conservazione_di_flusso[10]
+                                   0            -0             = 
+    11 conservazione_di_flusso[11]
+                                   0            -0             = 
+    12 conservazione_di_flusso[12]
+                                   0            -0             = 
+    13 conservazione_di_flusso[13]
+                                   0            -0             = 
+    14 conservazione_di_flusso[14]
+                                   0            -0             = 
+    15 primo                       1             1             = 
+    16 ultimo                      1             1             = 
+    17 rischio                    14                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 scelta[0,1]  *              0             0             1 
+     2 scelta[1,1]  *              0             0             1 
+     3 scelta[2,1]  *              0             0             1 
+     4 scelta[3,1]  *              0             0             1 
+     5 scelta[4,1]  *              0             0             1 
+     6 scelta[5,1]  *              0             0             1 
+     7 scelta[6,1]  *              0             0             1 
+     8 scelta[7,1]  *              0             0             1 
+     9 scelta[8,1]  *              0             0             1 
+    10 scelta[9,1]  *              0             0             1 
+    11 scelta[10,1] *              0             0             1 
+    12 scelta[11,1] *              0             0             1 
+    13 scelta[12,1] *              0             0             1 
+    14 scelta[13,1] *              0             0             1 
+    15 scelta[14,1] *              0             0             1 
+    16 scelta[15,1] *              0             0             1 
+    17 scelta[1,0]  *              0             0             1 
+    18 scelta[1,2]  *              0             0             1 
+    19 scelta[1,3]  *              0             0             1 
+    20 scelta[1,4]  *              0             0             1 
+    21 scelta[1,5]  *              0             0             1 
+    22 scelta[1,6]  *              0             0             1 
+    23 scelta[1,7]  *              0             0             1 
+    24 scelta[1,8]  *              0             0             1 
+    25 scelta[1,9]  *              0             0             1 
+    26 scelta[1,10] *              0             0             1 
+    27 scelta[1,11] *              0             0             1 
+    28 scelta[1,12] *              0             0             1 
+    29 scelta[1,13] *              0             0             1 
+    30 scelta[1,14] *              0             0             1 
+    31 scelta[1,15] *              0             0             1 
+    32 scelta[0,2]  *              0             0             1 
+    33 scelta[2,2]  *              0             0             1 
+    34 scelta[3,2]  *              0             0             1 
+    35 scelta[4,2]  *              0             0             1 
+    36 scelta[5,2]  *              0             0             1 
+    37 scelta[6,2]  *              0             0             1 
+    38 scelta[7,2]  *              0             0             1 
+    39 scelta[8,2]  *              0             0             1 
+    40 scelta[9,2]  *              0             0             1 
+    41 scelta[10,2] *              0             0             1 
+    42 scelta[11,2] *              0             0             1 
+    43 scelta[12,2] *              0             0             1 
+    44 scelta[13,2] *              0             0             1 
+    45 scelta[14,2] *              0             0             1 
+    46 scelta[15,2] *              0             0             1 
+    47 scelta[2,0]  *              0             0             1 
+    48 scelta[2,3]  *              0             0             1 
+    49 scelta[2,4]  *              0             0             1 
+    50 scelta[2,5]  *              0             0             1 
+    51 scelta[2,6]  *              0             0             1 
+    52 scelta[2,7]  *              0             0             1 
+    53 scelta[2,8]  *              0             0             1 
+    54 scelta[2,9]  *              0             0             1 
+    55 scelta[2,10] *              0             0             1 
+    56 scelta[2,11] *              0             0             1 
+    57 scelta[2,12] *              0             0             1 
+    58 scelta[2,13] *              0             0             1 
+    59 scelta[2,14] *              0             0             1 
+    60 scelta[2,15] *              0             0             1 
+    61 scelta[0,3]  *              1             0             1 
+    62 scelta[3,3]  *              0             0             1 
+    63 scelta[4,3]  *              0             0             1 
+    64 scelta[5,3]  *              0             0             1 
+    65 scelta[6,3]  *              0             0             1 
+    66 scelta[7,3]  *              0             0             1 
+    67 scelta[8,3]  *              0             0             1 
+    68 scelta[9,3]  *              0             0             1 
+    69 scelta[10,3] *              0             0             1 
+    70 scelta[11,3] *              0             0             1 
+    71 scelta[12,3] *              0             0             1 
+    72 scelta[13,3] *              0             0             1 
+    73 scelta[14,3] *              0             0             1 
+    74 scelta[15,3] *              0             0             1 
+    75 scelta[3,0]  *              0             0             1 
+    76 scelta[3,4]  *              0             0             1 
+    77 scelta[3,5]  *              0             0             1 
+    78 scelta[3,6]  *              1             0             1 
+    79 scelta[3,7]  *              0             0             1 
+    80 scelta[3,8]  *              0             0             1 
+    81 scelta[3,9]  *              0             0             1 
+    82 scelta[3,10] *              0             0             1 
+    83 scelta[3,11] *              0             0             1 
+    84 scelta[3,12] *              0             0             1 
+    85 scelta[3,13] *              0             0             1 
+    86 scelta[3,14] *              0             0             1 
+    87 scelta[3,15] *              0             0             1 
+    88 scelta[0,4]  *              0             0             1 
+    89 scelta[4,4]  *              0             0             1 
+    90 scelta[5,4]  *              0             0             1 
+    91 scelta[6,4]  *              0             0             1 
+    92 scelta[7,4]  *              0             0             1 
+    93 scelta[8,4]  *              0             0             1 
+    94 scelta[9,4]  *              0             0             1 
+    95 scelta[10,4] *              0             0             1 
+    96 scelta[11,4] *              0             0             1 
+    97 scelta[12,4] *              0             0             1 
+    98 scelta[13,4] *              0             0             1 
+    99 scelta[14,4] *              0             0             1 
+   100 scelta[15,4] *              0             0             1 
+   101 scelta[4,0]  *              0             0             1 
+   102 scelta[4,5]  *              0             0             1 
+   103 scelta[4,6]  *              0             0             1 
+   104 scelta[4,7]  *              0             0             1 
+   105 scelta[4,8]  *              0             0             1 
+   106 scelta[4,9]  *              0             0             1 
+   107 scelta[4,10] *              0             0             1 
+   108 scelta[4,11] *              0             0             1 
+   109 scelta[4,12] *              0             0             1 
+   110 scelta[4,13] *              0             0             1 
+   111 scelta[4,14] *              0             0             1 
+   112 scelta[4,15] *              0             0             1 
+   113 scelta[0,5]  *              0             0             1 
+   114 scelta[5,5]  *              0             0             1 
+   115 scelta[6,5]  *              0             0             1 
+   116 scelta[7,5]  *              0             0             1 
+   117 scelta[8,5]  *              0             0             1 
+   118 scelta[9,5]  *              0             0             1 
+   119 scelta[10,5] *              0             0             1 
+   120 scelta[11,5] *              0             0             1 
+   121 scelta[12,5] *              0             0             1 
+   122 scelta[13,5] *              0             0             1 
+   123 scelta[14,5] *              0             0             1 
+   124 scelta[15,5] *              0             0             1 
+   125 scelta[5,0]  *              0             0             1 
+   126 scelta[5,6]  *              0             0             1 
+   127 scelta[5,7]  *              0             0             1 
+   128 scelta[5,8]  *              0             0             1 
+   129 scelta[5,9]  *              0             0             1 
+   130 scelta[5,10] *              0             0             1 
+   131 scelta[5,11] *              0             0             1 
+   132 scelta[5,12] *              0             0             1 
+   133 scelta[5,13] *              0             0             1 
+   134 scelta[5,14] *              0             0             1 
+   135 scelta[5,15] *              0             0             1 
+   136 scelta[0,6]  *              0             0             1 
+   137 scelta[6,6]  *              0             0             1 
+   138 scelta[7,6]  *              0             0             1 
+   139 scelta[8,6]  *              0             0             1 
+   140 scelta[9,6]  *              0             0             1 
+   141 scelta[10,6] *              0             0             1 
+   142 scelta[11,6] *              0             0             1 
+   143 scelta[12,6] *              0             0             1 
+   144 scelta[13,6] *              0             0             1 
+   145 scelta[14,6] *              0             0             1 
+   146 scelta[15,6] *              0             0             1 
+   147 scelta[6,0]  *              0             0             1 
+   148 scelta[6,7]  *              1             0             1 
+   149 scelta[6,8]  *              0             0             1 
+   150 scelta[6,9]  *              0             0             1 
+   151 scelta[6,10] *              0             0             1 
+   152 scelta[6,11] *              0             0             1 
+   153 scelta[6,12] *              0             0             1 
+   154 scelta[6,13] *              0             0             1 
+   155 scelta[6,14] *              0             0             1 
+   156 scelta[6,15] *              0             0             1 
+   157 scelta[0,7]  *              0             0             1 
+   158 scelta[7,7]  *              0             0             1 
+   159 scelta[8,7]  *              0             0             1 
+   160 scelta[9,7]  *              0             0             1 
+   161 scelta[10,7] *              0             0             1 
+   162 scelta[11,7] *              0             0             1 
+   163 scelta[12,7] *              0             0             1 
+   164 scelta[13,7] *              0             0             1 
+   165 scelta[14,7] *              0             0             1 
+   166 scelta[15,7] *              0             0             1 
+   167 scelta[7,0]  *              0             0             1 
+   168 scelta[7,8]  *              1             0             1 
+   169 scelta[7,9]  *              0             0             1 
+   170 scelta[7,10] *              0             0             1 
+   171 scelta[7,11] *              0             0             1 
+   172 scelta[7,12] *              0             0             1 
+   173 scelta[7,13] *              0             0             1 
+   174 scelta[7,14] *              0             0             1 
+   175 scelta[7,15] *              0             0             1 
+   176 scelta[0,8]  *              0             0             1 
+   177 scelta[8,8]  *              0             0             1 
+   178 scelta[9,8]  *              0             0             1 
+   179 scelta[10,8] *              0             0             1 
+   180 scelta[11,8] *              0             0             1 
+   181 scelta[12,8] *              0             0             1 
+   182 scelta[13,8] *              0             0             1 
+   183 scelta[14,8] *              0             0             1 
+   184 scelta[15,8] *              0             0             1 
+   185 scelta[8,0]  *              0             0             1 
+   186 scelta[8,9]  *              0             0             1 
+   187 scelta[8,10] *              0             0             1 
+   188 scelta[8,11] *              1             0             1 
+   189 scelta[8,12] *              0             0             1 
+   190 scelta[8,13] *              0             0             1 
+   191 scelta[8,14] *              0             0             1 
+   192 scelta[8,15] *              0             0             1 
+   193 scelta[0,9]  *              0             0             1 
+   194 scelta[9,9]  *              0             0             1 
+   195 scelta[10,9] *              0             0             1 
+   196 scelta[11,9] *              0             0             1 
+   197 scelta[12,9] *              0             0             1 
+   198 scelta[13,9] *              0             0             1 
+   199 scelta[14,9] *              0             0             1 
+   200 scelta[15,9] *              0             0             1 
+   201 scelta[9,0]  *              0             0             1 
+   202 scelta[9,10] *              0             0             1 
+   203 scelta[9,11] *              0             0             1 
+   204 scelta[9,12] *              0             0             1 
+   205 scelta[9,13] *              0             0             1 
+   206 scelta[9,14] *              0             0             1 
+   207 scelta[9,15] *              0             0             1 
+   208 scelta[0,10] *              0             0             1 
+   209 scelta[10,10]
+                    *              0             0             1 
+   210 scelta[11,10]
+                    *              0             0             1 
+   211 scelta[12,10]
+                    *              0             0             1 
+   212 scelta[13,10]
+                    *              0             0             1 
+   213 scelta[14,10]
+                    *              0             0             1 
+   214 scelta[15,10]
+                    *              0             0             1 
+   215 scelta[10,0] *              0             0             1 
+   216 scelta[10,11]
+                    *              0             0             1 
+   217 scelta[10,12]
+                    *              0             0             1 
+   218 scelta[10,13]
+                    *              0             0             1 
+   219 scelta[10,14]
+                    *              0             0             1 
+   220 scelta[10,15]
+                    *              0             0             1 
+   221 scelta[0,11] *              0             0             1 
+   222 scelta[11,11]
+                    *              0             0             1 
+   223 scelta[12,11]
+                    *              0             0             1 
+   224 scelta[13,11]
+                    *              0             0             1 
+   225 scelta[14,11]
+                    *              0             0             1 
+   226 scelta[15,11]
+                    *              0             0             1 
+   227 scelta[11,0] *              0             0             1 
+   228 scelta[11,12]
+                    *              0             0             1 
+   229 scelta[11,13]
+                    *              0             0             1 
+   230 scelta[11,14]
+                    *              1             0             1 
+   231 scelta[11,15]
+                    *              0             0             1 
+   232 scelta[0,12] *              0             0             1 
+   233 scelta[12,12]
+                    *              0             0             1 
+   234 scelta[13,12]
+                    *              0             0             1 
+   235 scelta[14,12]
+                    *              0             0             1 
+   236 scelta[15,12]
+                    *              0             0             1 
+   237 scelta[12,0] *              0             0             1 
+   238 scelta[12,13]
+                    *              0             0             1 
+   239 scelta[12,14]
+                    *              0             0             1 
+   240 scelta[12,15]
+                    *              0             0             1 
+   241 scelta[0,13] *              0             0             1 
+   242 scelta[13,13]
+                    *              0             0             1 
+   243 scelta[14,13]
+                    *              0             0             1 
+   244 scelta[15,13]
+                    *              0             0             1 
+   245 scelta[13,0] *              0             0             1 
+   246 scelta[13,14]
+                    *              0             0             1 
+   247 scelta[13,15]
+                    *              0             0             1 
+   248 scelta[0,14] *              0             0             1 
+   249 scelta[14,14]
+                    *              0             0             1 
+   250 scelta[15,14]
+                    *              0             0             1 
+   251 scelta[14,0] *              0             0             1 
+   252 scelta[14,15]
+                    *              1             0             1 
+   253 scelta[0,15] *              0             0             1 
+   254 scelta[0,0]  *              0             0             1 
+   255 scelta[15,0] *              0             0             1 
+   256 scelta[15,15]
+                    *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
