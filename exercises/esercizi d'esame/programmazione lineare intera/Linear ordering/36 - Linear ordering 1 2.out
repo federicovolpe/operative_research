@@ -1,0 +1,543 @@
+Problem:    36
+Rows:       239
+Columns:    49 (42 integer, 42 binary)
+Non-zeros:  763
+Status:     INTEGER OPTIMAL
+Objective:  z = 662 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 OrientaCoppia[1,2]
+                                   1             1             = 
+     2 OrientaCoppia[1,3]
+                                   1             1             = 
+     3 OrientaCoppia[1,4]
+                                   1             1             = 
+     4 OrientaCoppia[1,5]
+                                   1             1             = 
+     5 OrientaCoppia[1,6]
+                                   1             1             = 
+     6 OrientaCoppia[1,7]
+                                   1             1             = 
+     7 OrientaCoppia[2,3]
+                                   1             1             = 
+     8 OrientaCoppia[2,4]
+                                   1             1             = 
+     9 OrientaCoppia[2,5]
+                                   1             1             = 
+    10 OrientaCoppia[2,6]
+                                   1             1             = 
+    11 OrientaCoppia[2,7]
+                                   1             1             = 
+    12 OrientaCoppia[3,4]
+                                   1             1             = 
+    13 OrientaCoppia[3,5]
+                                   1             1             = 
+    14 OrientaCoppia[3,6]
+                                   1             1             = 
+    15 OrientaCoppia[3,7]
+                                   1             1             = 
+    16 OrientaCoppia[4,5]
+                                   1             1             = 
+    17 OrientaCoppia[4,6]
+                                   1             1             = 
+    18 OrientaCoppia[4,7]
+                                   1             1             = 
+    19 OrientaCoppia[5,6]
+                                   1             1             = 
+    20 OrientaCoppia[5,7]
+                                   1             1             = 
+    21 OrientaCoppia[6,7]
+                                   1             1             = 
+    22 Transitivity[1,2,3]
+                                   1                           1 
+    23 Transitivity[1,2,4]
+                                   0                           1 
+    24 Transitivity[1,2,5]
+                                   0                           1 
+    25 Transitivity[1,2,6]
+                                   0                           1 
+    26 Transitivity[1,2,7]
+                                   0                           1 
+    27 Transitivity[1,3,2]
+                                   0                           1 
+    28 Transitivity[1,3,4]
+                                   0                           1 
+    29 Transitivity[1,3,5]
+                                   0                           1 
+    30 Transitivity[1,3,6]
+                                   0                           1 
+    31 Transitivity[1,3,7]
+                                   0                           1 
+    32 Transitivity[1,4,2]
+                                   1                           1 
+    33 Transitivity[1,4,3]
+                                   1                           1 
+    34 Transitivity[1,4,5]
+                                   1                           1 
+    35 Transitivity[1,4,6]
+                                   1                           1 
+    36 Transitivity[1,4,7]
+                                   0                           1 
+    37 Transitivity[1,5,2]
+                                   1                           1 
+    38 Transitivity[1,5,3]
+                                   1                           1 
+    39 Transitivity[1,5,4]
+                                   0                           1 
+    40 Transitivity[1,5,6]
+                                   1                           1 
+    41 Transitivity[1,5,7]
+                                   0                           1 
+    42 Transitivity[1,6,2]
+                                   1                           1 
+    43 Transitivity[1,6,3]
+                                   1                           1 
+    44 Transitivity[1,6,4]
+                                   0                           1 
+    45 Transitivity[1,6,5]
+                                   0                           1 
+    46 Transitivity[1,6,7]
+                                   0                           1 
+    47 Transitivity[1,7,2]
+                                   1                           1 
+    48 Transitivity[1,7,3]
+                                   1                           1 
+    49 Transitivity[1,7,4]
+                                   1                           1 
+    50 Transitivity[1,7,5]
+                                   1                           1 
+    51 Transitivity[1,7,6]
+                                   1                           1 
+    52 Transitivity[2,1,3]
+                                   0                           1 
+    53 Transitivity[2,1,4]
+                                   1                           1 
+    54 Transitivity[2,1,5]
+                                   1                           1 
+    55 Transitivity[2,1,6]
+                                   1                           1 
+    56 Transitivity[2,1,7]
+                                   1                           1 
+    57 Transitivity[2,3,1]
+                                   1                           1 
+    58 Transitivity[2,3,4]
+                                   1                           1 
+    59 Transitivity[2,3,5]
+                                   1                           1 
+    60 Transitivity[2,3,6]
+                                   1                           1 
+    61 Transitivity[2,3,7]
+                                   1                           1 
+    62 Transitivity[2,4,1]
+                                   0                           1 
+    63 Transitivity[2,4,3]
+                                   0                           1 
+    64 Transitivity[2,4,5]
+                                   1                           1 
+    65 Transitivity[2,4,6]
+                                   1                           1 
+    66 Transitivity[2,4,7]
+                                   0                           1 
+    67 Transitivity[2,5,1]
+                                   0                           1 
+    68 Transitivity[2,5,3]
+                                   0                           1 
+    69 Transitivity[2,5,4]
+                                   0                           1 
+    70 Transitivity[2,5,6]
+                                   1                           1 
+    71 Transitivity[2,5,7]
+                                   0                           1 
+    72 Transitivity[2,6,1]
+                                   0                           1 
+    73 Transitivity[2,6,3]
+                                   0                           1 
+    74 Transitivity[2,6,4]
+                                   0                           1 
+    75 Transitivity[2,6,5]
+                                   0                           1 
+    76 Transitivity[2,6,7]
+                                   0                           1 
+    77 Transitivity[2,7,1]
+                                   0                           1 
+    78 Transitivity[2,7,3]
+                                   0                           1 
+    79 Transitivity[2,7,4]
+                                   1                           1 
+    80 Transitivity[2,7,5]
+                                   1                           1 
+    81 Transitivity[2,7,6]
+                                   1                           1 
+    82 Transitivity[3,1,2]
+                                   1                           1 
+    83 Transitivity[3,1,4]
+                                   1                           1 
+    84 Transitivity[3,1,5]
+                                   1                           1 
+    85 Transitivity[3,1,6]
+                                   1                           1 
+    86 Transitivity[3,1,7]
+                                   1                           1 
+    87 Transitivity[3,2,1]
+                                   0                           1 
+    88 Transitivity[3,2,4]
+                                   0                           1 
+    89 Transitivity[3,2,5]
+                                   0                           1 
+    90 Transitivity[3,2,6]
+                                   0                           1 
+    91 Transitivity[3,2,7]
+                                   0                           1 
+    92 Transitivity[3,4,1]
+                                   0                           1 
+    93 Transitivity[3,4,2]
+                                   1                           1 
+    94 Transitivity[3,4,5]
+                                   1                           1 
+    95 Transitivity[3,4,6]
+                                   1                           1 
+    96 Transitivity[3,4,7]
+                                   0                           1 
+    97 Transitivity[3,5,1]
+                                   0                           1 
+    98 Transitivity[3,5,2]
+                                   1                           1 
+    99 Transitivity[3,5,4]
+                                   0                           1 
+   100 Transitivity[3,5,6]
+                                   1                           1 
+   101 Transitivity[3,5,7]
+                                   0                           1 
+   102 Transitivity[3,6,1]
+                                   0                           1 
+   103 Transitivity[3,6,2]
+                                   1                           1 
+   104 Transitivity[3,6,4]
+                                   0                           1 
+   105 Transitivity[3,6,5]
+                                   0                           1 
+   106 Transitivity[3,6,7]
+                                   0                           1 
+   107 Transitivity[3,7,1]
+                                   0                           1 
+   108 Transitivity[3,7,2]
+                                   1                           1 
+   109 Transitivity[3,7,4]
+                                   1                           1 
+   110 Transitivity[3,7,5]
+                                   1                           1 
+   111 Transitivity[3,7,6]
+                                   1                           1 
+   112 Transitivity[4,1,2]
+                                   0                           1 
+   113 Transitivity[4,1,3]
+                                   0                           1 
+   114 Transitivity[4,1,5]
+                                   0                           1 
+   115 Transitivity[4,1,6]
+                                   0                           1 
+   116 Transitivity[4,1,7]
+                                   1                           1 
+   117 Transitivity[4,2,1]
+                                   1                           1 
+   118 Transitivity[4,2,3]
+                                   1                           1 
+   119 Transitivity[4,2,5]
+                                   0                           1 
+   120 Transitivity[4,2,6]
+                                   0                           1 
+   121 Transitivity[4,2,7]
+                                   1                           1 
+   122 Transitivity[4,3,1]
+                                   1                           1 
+   123 Transitivity[4,3,2]
+                                   0                           1 
+   124 Transitivity[4,3,5]
+                                   0                           1 
+   125 Transitivity[4,3,6]
+                                   0                           1 
+   126 Transitivity[4,3,7]
+                                   1                           1 
+   127 Transitivity[4,5,1]
+                                   1                           1 
+   128 Transitivity[4,5,2]
+                                   1                           1 
+   129 Transitivity[4,5,3]
+                                   1                           1 
+   130 Transitivity[4,5,6]
+                                   1                           1 
+   131 Transitivity[4,5,7]
+                                   1                           1 
+   132 Transitivity[4,6,1]
+                                   1                           1 
+   133 Transitivity[4,6,2]
+                                   1                           1 
+   134 Transitivity[4,6,3]
+                                   1                           1 
+   135 Transitivity[4,6,5]
+                                   0                           1 
+   136 Transitivity[4,6,7]
+                                   1                           1 
+   137 Transitivity[4,7,1]
+                                   0                           1 
+   138 Transitivity[4,7,2]
+                                   0                           1 
+   139 Transitivity[4,7,3]
+                                   0                           1 
+   140 Transitivity[4,7,5]
+                                   0                           1 
+   141 Transitivity[4,7,6]
+                                   0                           1 
+   142 Transitivity[5,1,2]
+                                   0                           1 
+   143 Transitivity[5,1,3]
+                                   0                           1 
+   144 Transitivity[5,1,4]
+                                   1                           1 
+   145 Transitivity[5,1,6]
+                                   0                           1 
+   146 Transitivity[5,1,7]
+                                   1                           1 
+   147 Transitivity[5,2,1]
+                                   1                           1 
+   148 Transitivity[5,2,3]
+                                   1                           1 
+   149 Transitivity[5,2,4]
+                                   1                           1 
+   150 Transitivity[5,2,6]
+                                   0                           1 
+   151 Transitivity[5,2,7]
+                                   1                           1 
+   152 Transitivity[5,3,1]
+                                   1                           1 
+   153 Transitivity[5,3,2]
+                                   0                           1 
+   154 Transitivity[5,3,4]
+                                   1                           1 
+   155 Transitivity[5,3,6]
+                                   0                           1 
+   156 Transitivity[5,3,7]
+                                   1                           1 
+   157 Transitivity[5,4,1]
+                                   0                           1 
+   158 Transitivity[5,4,2]
+                                   0                           1 
+   159 Transitivity[5,4,3]
+                                   0                           1 
+   160 Transitivity[5,4,6]
+                                   0                           1 
+   161 Transitivity[5,4,7]
+                                   0                           1 
+   162 Transitivity[5,6,1]
+                                   1                           1 
+   163 Transitivity[5,6,2]
+                                   1                           1 
+   164 Transitivity[5,6,3]
+                                   1                           1 
+   165 Transitivity[5,6,4]
+                                   1                           1 
+   166 Transitivity[5,6,7]
+                                   1                           1 
+   167 Transitivity[5,7,1]
+                                   0                           1 
+   168 Transitivity[5,7,2]
+                                   0                           1 
+   169 Transitivity[5,7,3]
+                                   0                           1 
+   170 Transitivity[5,7,4]
+                                   1                           1 
+   171 Transitivity[5,7,6]
+                                   0                           1 
+   172 Transitivity[6,1,2]
+                                   0                           1 
+   173 Transitivity[6,1,3]
+                                   0                           1 
+   174 Transitivity[6,1,4]
+                                   1                           1 
+   175 Transitivity[6,1,5]
+                                   1                           1 
+   176 Transitivity[6,1,7]
+                                   1                           1 
+   177 Transitivity[6,2,1]
+                                   1                           1 
+   178 Transitivity[6,2,3]
+                                   1                           1 
+   179 Transitivity[6,2,4]
+                                   1                           1 
+   180 Transitivity[6,2,5]
+                                   1                           1 
+   181 Transitivity[6,2,7]
+                                   1                           1 
+   182 Transitivity[6,3,1]
+                                   1                           1 
+   183 Transitivity[6,3,2]
+                                   0                           1 
+   184 Transitivity[6,3,4]
+                                   1                           1 
+   185 Transitivity[6,3,5]
+                                   1                           1 
+   186 Transitivity[6,3,7]
+                                   1                           1 
+   187 Transitivity[6,4,1]
+                                   0                           1 
+   188 Transitivity[6,4,2]
+                                   0                           1 
+   189 Transitivity[6,4,3]
+                                   0                           1 
+   190 Transitivity[6,4,5]
+                                   1                           1 
+   191 Transitivity[6,4,7]
+                                   0                           1 
+   192 Transitivity[6,5,1]
+                                   0                           1 
+   193 Transitivity[6,5,2]
+                                   0                           1 
+   194 Transitivity[6,5,3]
+                                   0                           1 
+   195 Transitivity[6,5,4]
+                                   0                           1 
+   196 Transitivity[6,5,7]
+                                   0                           1 
+   197 Transitivity[6,7,1]
+                                   0                           1 
+   198 Transitivity[6,7,2]
+                                   0                           1 
+   199 Transitivity[6,7,3]
+                                   0                           1 
+   200 Transitivity[6,7,4]
+                                   1                           1 
+   201 Transitivity[6,7,5]
+                                   1                           1 
+   202 Transitivity[7,1,2]
+                                   0                           1 
+   203 Transitivity[7,1,3]
+                                   0                           1 
+   204 Transitivity[7,1,4]
+                                   0                           1 
+   205 Transitivity[7,1,5]
+                                   0                           1 
+   206 Transitivity[7,1,6]
+                                   0                           1 
+   207 Transitivity[7,2,1]
+                                   1                           1 
+   208 Transitivity[7,2,3]
+                                   1                           1 
+   209 Transitivity[7,2,4]
+                                   0                           1 
+   210 Transitivity[7,2,5]
+                                   0                           1 
+   211 Transitivity[7,2,6]
+                                   0                           1 
+   212 Transitivity[7,3,1]
+                                   1                           1 
+   213 Transitivity[7,3,2]
+                                   0                           1 
+   214 Transitivity[7,3,4]
+                                   0                           1 
+   215 Transitivity[7,3,5]
+                                   0                           1 
+   216 Transitivity[7,3,6]
+                                   0                           1 
+   217 Transitivity[7,4,1]
+                                   1                           1 
+   218 Transitivity[7,4,2]
+                                   1                           1 
+   219 Transitivity[7,4,3]
+                                   1                           1 
+   220 Transitivity[7,4,5]
+                                   1                           1 
+   221 Transitivity[7,4,6]
+                                   1                           1 
+   222 Transitivity[7,5,1]
+                                   1                           1 
+   223 Transitivity[7,5,2]
+                                   1                           1 
+   224 Transitivity[7,5,3]
+                                   1                           1 
+   225 Transitivity[7,5,4]
+                                   0                           1 
+   226 Transitivity[7,5,6]
+                                   1                           1 
+   227 Transitivity[7,6,1]
+                                   1                           1 
+   228 Transitivity[7,6,2]
+                                   1                           1 
+   229 Transitivity[7,6,3]
+                                   1                           1 
+   230 Transitivity[7,6,4]
+                                   0                           1 
+   231 Transitivity[7,6,5]
+                                   0                           1 
+   232 z                         662                             
+   233 Posizione[1]                1             1             = 
+   234 Posizione[2]                1             1             = 
+   235 Posizione[3]                1             1             = 
+   236 Posizione[4]                1             1             = 
+   237 Posizione[5]                1             1             = 
+   238 Posizione[6]                1             1             = 
+   239 Posizione[7]                1             1             = 
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[2,1]       *              0             0             1 
+     2 x[1,2]       *              1             0             1 
+     3 x[3,1]       *              1             0             1 
+     4 x[1,3]       *              0             0             1 
+     5 x[4,1]       *              0             0             1 
+     6 x[1,4]       *              1             0             1 
+     7 x[5,1]       *              0             0             1 
+     8 x[1,5]       *              1             0             1 
+     9 x[6,1]       *              0             0             1 
+    10 x[1,6]       *              1             0             1 
+    11 x[7,1]       *              0             0             1 
+    12 x[1,7]       *              1             0             1 
+    13 x[3,2]       *              1             0             1 
+    14 x[2,3]       *              0             0             1 
+    15 x[4,2]       *              1             0             1 
+    16 x[2,4]       *              0             0             1 
+    17 x[5,2]       *              1             0             1 
+    18 x[2,5]       *              0             0             1 
+    19 x[6,2]       *              1             0             1 
+    20 x[2,6]       *              0             0             1 
+    21 x[7,2]       *              1             0             1 
+    22 x[2,7]       *              0             0             1 
+    23 x[4,3]       *              0             0             1 
+    24 x[3,4]       *              1             0             1 
+    25 x[5,3]       *              0             0             1 
+    26 x[3,5]       *              1             0             1 
+    27 x[6,3]       *              0             0             1 
+    28 x[3,6]       *              1             0             1 
+    29 x[7,3]       *              0             0             1 
+    30 x[3,7]       *              1             0             1 
+    31 x[5,4]       *              0             0             1 
+    32 x[4,5]       *              1             0             1 
+    33 x[6,4]       *              0             0             1 
+    34 x[4,6]       *              1             0             1 
+    35 x[7,4]       *              1             0             1 
+    36 x[4,7]       *              0             0             1 
+    37 x[6,5]       *              0             0             1 
+    38 x[5,6]       *              1             0             1 
+    39 x[7,5]       *              1             0             1 
+    40 x[5,7]       *              0             0             1 
+    41 x[7,6]       *              1             0             1 
+    42 x[6,7]       *              0             0             1 
+    43 posiz[1]                    2                             
+    44 posiz[2]                    7                             
+    45 posiz[3]                    1                             
+    46 posiz[4]                    4                             
+    47 posiz[5]                    5                             
+    48 posiz[6]                    6                             
+    49 posiz[7]                    3                             
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
