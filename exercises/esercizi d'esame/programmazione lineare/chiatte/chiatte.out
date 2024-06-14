@@ -1,0 +1,41 @@
+Problem:    chiatte
+Rows:       4
+Columns:    4
+Non-zeros:  12
+Status:     OPTIMAL
+Objective:  flux = 33.6 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 Conservazione_flusso
+                    NS             0            -0             =          -0.2 
+     2 Strettoie[1] NU             1                           1          19.2 
+     3 Strettoie[2] NU             1                           1          14.4 
+     4 flux         B           33.6                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 flussi[1,1]  B            4.8             0               
+     2 flussi[2,1]  B             12             0               
+     3 flussi[1,2]  B           16.8             0               
+     4 flussi[2,2]  NL             0             0                   -0.181818 
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 3.55e-15 on row 1
+        max.rel.err = 1.03e-16 on row 1
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 4.44e-16 on column 2
+        max.rel.err = 1.31e-16 on column 2
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
