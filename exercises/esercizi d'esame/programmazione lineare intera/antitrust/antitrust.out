@@ -1,127 +1,77 @@
 Problem:    antitrust
-Rows:       101
-Columns:    11 (10 integer, 10 binary)
-Non-zeros:  201
+Rows:       21
+Columns:    21 (10 integer, 10 binary)
+Non-zeros:  141
 Status:     INTEGER OPTIMAL
-Objective:  differenza = 62000 (MINimum)
+Objective:  d = 8400 (MINimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
-     1 delta1[1,1]             92000         15000               
-     2 delta1[1,2]            102000         20000               
-     3 delta1[1,3]             98000         18000               
-     4 delta1[1,4]            178000         58000               
-     5 delta1[1,5]             66800          2400               
-     6 delta1[2,1]             62000         20000               
-     7 delta1[2,2]             62000         10000               
-     8 delta1[2,3]             62000         20000               
-     9 delta1[2,4]             62000         57000               
-    10 delta1[2,5]             62000          1900               
-    11 delta1[3,1]             62000         18000               
-    12 delta1[3,2]             62000         23000               
-    13 delta1[3,3]             62000         17500               
-    14 delta1[3,4]             62000         55500               
-    15 delta1[3,5]             62000          9820               
-    16 delta1[4,1]             62000         21000               
-    17 delta1[4,2]             62000         12000               
-    18 delta1[4,3]             62000         16800               
-    19 delta1[4,4]             62000         48000               
-    20 delta1[4,5]             62000          6000               
-    21 delta1[5,1]             87000         12500               
-    22 delta1[5,2]             82000         10000               
-    23 delta1[5,3]             83900         10950               
-    24 delta1[5,4]            186000         62000               
-    25 delta1[5,5]             77600          7800               
-    26 delta1[6,1]             89500         13750               
-    27 delta1[6,2]            106000         22000               
-    28 delta1[6,3]             90800         14400               
-    29 delta1[6,4]            182000         60000               
-    30 delta1[6,5]             67000          2500               
-    31 delta1[7,1]             62000         20500               
-    32 delta1[7,2]             62000         21000               
-    33 delta1[7,3]             62000         21000               
-    34 delta1[7,4]             62000         59800               
-    35 delta1[7,5]             62000          1980               
-    36 delta1[8,1]             62000         14250               
-    37 delta1[8,2]             62000         23800               
-    38 delta1[8,3]             62000         21500               
-    39 delta1[8,4]             62000         55500               
-    40 delta1[8,5]             62000          3450               
-    41 delta1[9,1]             62000         10800               
-    42 delta1[9,2]             62000         14180               
-    43 delta1[9,3]             62000         25400               
-    44 delta1[9,4]             62000         53250               
-    45 delta1[9,5]             62000          6500               
-    46 delta1[10,1]            62000         13700               
-    47 delta1[10,2]            62000         13980               
-    48 delta1[10,3]            62000         20100               
-    49 delta1[10,4]            62000         57500               
-    50 delta1[10,5]            62000          4000               
-    51 delta2[1,1]             32000        -15000               
-    52 delta2[1,2]             22000        -20000               
-    53 delta2[1,3]             26000        -18000               
-    54 delta2[1,4]            -54000        -58000               
-    55 delta2[1,5]             57200         -2400               
-    56 delta2[2,1]             62000        -20000               
-    57 delta2[2,2]             62000        -10000               
-    58 delta2[2,3]             62000        -20000               
-    59 delta2[2,4]             62000        -57000               
-    60 delta2[2,5]             62000         -1900               
-    61 delta2[3,1]             62000        -18000               
-    62 delta2[3,2]             62000        -23000               
-    63 delta2[3,3]             62000        -17500               
-    64 delta2[3,4]             62000        -55500               
-    65 delta2[3,5]             62000         -9820               
-    66 delta2[4,1]             62000        -21000               
-    67 delta2[4,2]             62000        -12000               
-    68 delta2[4,3]             62000        -16800               
-    69 delta2[4,4]             62000        -48000               
-    70 delta2[4,5]             62000         -6000               
-    71 delta2[5,1]             37000        -12500               
-    72 delta2[5,2]             42000        -10000               
-    73 delta2[5,3]             40100        -10950               
-    74 delta2[5,4]            -62000        -62000               
-    75 delta2[5,5]             46400         -7800               
-    76 delta2[6,1]             34500        -13750               
-    77 delta2[6,2]             18000        -22000               
-    78 delta2[6,3]             33200        -14400               
-    79 delta2[6,4]            -58000        -60000               
-    80 delta2[6,5]             57000         -2500               
-    81 delta2[7,1]             62000        -20500               
-    82 delta2[7,2]             62000        -21000               
-    83 delta2[7,3]             62000        -21000               
-    84 delta2[7,4]             62000        -59800               
-    85 delta2[7,5]             62000         -1980               
-    86 delta2[8,1]             62000        -14250               
-    87 delta2[8,2]             62000        -23800               
-    88 delta2[8,3]             62000        -21500               
-    89 delta2[8,4]             62000        -55500               
-    90 delta2[8,5]             62000         -3450               
-    91 delta2[9,1]             62000        -10800               
-    92 delta2[9,2]             62000        -14180               
-    93 delta2[9,3]             62000        -25400               
-    94 delta2[9,4]             62000        -53250               
-    95 delta2[9,5]             62000         -6500               
-    96 delta2[10,1]            62000        -13700               
-    97 delta2[10,2]            62000        -13980               
-    98 delta2[10,3]            62000        -20100               
-    99 delta2[10,4]            62000        -57500               
-   100 delta2[10,5]            62000         -4000               
-   101 differenza              62000                             
+     1 fatturato_a[A]
+                                   0            -0             = 
+     2 fatturato_a[B]
+                                   0            -0             = 
+     3 fatturato_a[C]
+                                   0            -0             = 
+     4 fatturato_a[D]
+                                   0            -0             = 
+     5 fatturato_a[E]
+                                   0            -0             = 
+     6 fatturato_b[A]
+                              159500        159500             = 
+     7 fatturato_b[B]
+                              169960        169960             = 
+     8 fatturato_b[C]
+                              185650        185650             = 
+     9 fatturato_b[D]
+                              566550        566550             = 
+    10 fatturato_b[E]
+                               46350         46350             = 
+    11 differenza[A]
+                                4000            -0               
+    12 differenza[B]
+                               16800            -0               
+    13 differenza[C]
+                               13350            -0               
+    14 differenza[D]
+                                9350            -0               
+    15 differenza[E]
+                                8290            -0               
+    16 differenza2[A]
+                               12800            -0               
+    17 differenza2[B]
+                                   0            -0               
+    18 differenza2[C]
+                                3450            -0               
+    19 differenza2[D]
+                                7450            -0               
+    20 differenza2[E]
+                                8510            -0               
+    21 d                        8400                             
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
-     1 ass[1]       *              1             0             1 
-     2 ass[2]       *              0             0             1 
-     3 ass[3]       *              0             0             1 
-     4 ass[4]       *              0             0             1 
-     5 ass[5]       *              1             0             1 
-     6 ass[6]       *              1             0             1 
-     7 ass[7]       *              0             0             1 
-     8 ass[8]       *              0             0             1 
-     9 ass[9]       *              0             0             1 
-    10 ass[10]      *              0             0             1 
-    11 delta                   62000             0               
+     1 assign[1]    *              1             0             1 
+     2 assign[2]    *              1             0             1 
+     3 assign[3]    *              1             0             1 
+     4 assign[4]    *              0             0             1 
+     5 assign[5]    *              0             0             1 
+     6 assign[6]    *              1             0             1 
+     7 assign[7]    *              0             0             1 
+     8 assign[8]    *              0             0             1 
+     9 assign[9]    *              1             0             1 
+    10 assign[10]   *              0             0             1 
+    11 fattA[A]                77550             0               
+    12 fattA[B]                89180             0               
+    13 fattA[C]                95300             0               
+    14 fattA[D]               283750             0               
+    15 fattA[E]                23120             0               
+    16 fattB[A]                81950             0               
+    17 fattB[B]                80780             0               
+    18 fattB[C]                90350             0               
+    19 fattB[D]               282800             0               
+    20 fattB[E]                23230             0               
+    21 maxd                     8400                             
 
 Integer feasibility conditions:
 
@@ -129,8 +79,8 @@ KKT.PE: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 
-KKT.PB: max.abs.err = 0.00e+00 on row 0
-        max.rel.err = 0.00e+00 on row 0
+KKT.PB: max.abs.err = 1.82e-12 on row 17
+        max.rel.err = 1.82e-12 on row 17
         High quality
 
 End of output
