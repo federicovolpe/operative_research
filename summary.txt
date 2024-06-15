@@ -3,6 +3,8 @@ forno : massimizzazione dei guadagni con diverse produzioni
 cuori solitari: massimizzazione del minimo di una matrice doppia
 merendine: massimizzazione del guadagno semplice produzione
 tulipani: massimizzazione del guadagno dividendo un terreno in striscie e diverse aree (non riuscito)
+chiatte: massimizzazione di due flussi in due direzioni
+feriti: 
 
 PLI:
 containers: data la capacità di diverse knapsack utilizzare il minor numero di knapsack per contenere tutti gli oggetti 
@@ -12,4 +14,10 @@ immagini: bin packing eventi incompatibili per sovrapposizione
 antitrust: minmax di un valore assoluto
 sfilata: calcolo del percorso ottimale (non riuscito)
 linear ordering: calcolo del percorso che attraversa tutti i nodi di un grafo
-percorso : cammino minimo fra nodi
+percorso : cammino minimo fra nodi (conservazione di flusso, impostazione del nodo iniziale e finale)
+sfilata: cammino con costo minore del grafico con punto di fine e inizio
+ring loading: calibrare il traffico in un anello (in entrambe le direzioni)
+
+PNL:
+prezzi : massimizzazione di guadagni di prodotti differenti
+ragno: minimizzazione del filo utilizzato per la costruzione di un'area
