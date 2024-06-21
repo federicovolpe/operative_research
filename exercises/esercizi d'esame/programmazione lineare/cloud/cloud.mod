@@ -1,28 +1,28 @@
 reset;
 
-#		DATI
-set Cont := 1..4;
-param cy {Cont};
-param ch {Cont};
-param q := 0;
+#		DATI		####################################################
+set Cont := 1..4;	# set dei contratti
+param cf {Cont};	# costi fissi 	[€]
+param ch {Cont};	# costi orario 	[€/h]
 
+# parametro entro cui q può variare
+param parametro;	# parametro che andrà modificato per l'analisi parametrica
 
-#		VARIABILI
-var domanda >= 0;
-var delta >= 0;
+#		VARIABILI	######################################################àà
+var costo >= 0;	
+var q := 0;			# parametro su cui eseguire l'analisi parametrica
 
-
-#		VINCOLI
-
-subject to Linearizzazione {c in Cont}:
-	delta <= cy[c] + ch[c] * domanda
-;
+#		VINCOLI		###########################################################à
+# imposizione del costo minimo
+subject to Minimo {c in Cont}:
+	costo <= cf[c] + ch[c] * parametro ;
 
 subject to fissoLaDomanda :
-	domanda = q
-;
+	q  <= parametro;
 
 #		OBIETTIVO
+# minimizzazione del costo
+minimize z: costo;
 
 # l'output dell'esercizio è una funzione
 # bisogna analizzare la curva della funzione 
@@ -40,11 +40,11 @@ data;
 # terzo q poco più del precedente valore di fissoLaDomanda
  param q = 5500;
 
-param : cy ch :=
-1 $1560   0.128
-2 $1280   0.192
-3  552   $0.312/ora
-4      0 $0.640 ;
+param : cy 		ch :=
+1 		1560   	0.128
+2 		1280   	0.192
+3  		552   	0.312
+4      	0 		0.640 ;
 
 
 end;

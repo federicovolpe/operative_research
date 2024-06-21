@@ -1,0 +1,128 @@
+Problem:    Comizi
+Rows:       28
+Columns:    51 (50 integer, 50 binary)
+Non-zeros:  224
+Status:     INTEGER OPTIMAL
+Objective:  z = 650 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 z                         650                             
+     2 maxTempo                 4.92                          16 
+     3 Assegnamento                1                           1 
+     4 Spostamento[a]
+                                 292            -0               
+     5 Spostamento[b]
+                                 292            -0               
+     6 Spostamento[c]
+                                 292            -0               
+     7 Spostamento[d]
+                                 292            -0               
+     8 Spostamento[e]
+                                 292            -0               
+     9 Spostamento[f]
+                                 292            -0               
+    10 Spostamento[g]
+                                 292            -0               
+    11 Spostamento[h]
+                                 292            -0               
+    12 Spostamento[i]
+                                 292            -0               
+    13 Spostamento[j]
+                                 292            -0               
+    14 Spostamento[k]
+                                 292            -0               
+    15 Spostamento[l]
+                                 292            -0               
+    16 Spostamento[m]
+                                 292            -0               
+    17 Spostamento[n]
+                                 292            -0               
+    18 Spostamento[o]
+                                 292            -0               
+    19 Spostamento[p]
+                                 292            -0               
+    20 Spostamento[q]
+                                 292            -0               
+    21 Spostamento[r]
+                                 292            -0               
+    22 Spostamento[s]
+                                 292            -0               
+    23 Spostamento[t]
+                                 292            -0               
+    24 Spostamento[u]
+                                 292            -0               
+    25 Spostamento[v]
+                                 292            -0               
+    26 Spostamento[w]
+                                 292            -0               
+    27 Spostamento[x]
+                                   0            -0               
+    28 Spostamento[y]
+                                 292            -0               
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[a]         *              0             0             1 
+     2 x[b]         *              0             0             1 
+     3 x[c]         *              0             0             1 
+     4 x[d]         *              0             0             1 
+     5 x[e]         *              0             0             1 
+     6 x[f]         *              0             0             1 
+     7 x[g]         *              0             0             1 
+     8 x[h]         *              0             0             1 
+     9 x[i]         *              0             0             1 
+    10 x[j]         *              0             0             1 
+    11 x[k]         *              0             0             1 
+    12 x[l]         *              0             0             1 
+    13 x[m]         *              0             0             1 
+    14 x[n]         *              0             0             1 
+    15 x[o]         *              0             0             1 
+    16 x[p]         *              0             0             1 
+    17 x[q]         *              0             0             1 
+    18 x[r]         *              0             0             1 
+    19 x[s]         *              0             0             1 
+    20 x[t]         *              0             0             1 
+    21 x[u]         *              0             0             1 
+    22 x[v]         *              0             0             1 
+    23 x[w]         *              0             0             1 
+    24 x[x]         *              0             0             1 
+    25 x[y]         *              0             0             1 
+    26 y[a]         *              0             0             1 
+    27 y[b]         *              0             0             1 
+    28 y[c]         *              0             0             1 
+    29 y[d]         *              0             0             1 
+    30 y[e]         *              0             0             1 
+    31 y[f]         *              0             0             1 
+    32 y[g]         *              0             0             1 
+    33 y[h]         *              0             0             1 
+    34 y[i]         *              0             0             1 
+    35 y[j]         *              0             0             1 
+    36 y[k]         *              0             0             1 
+    37 y[l]         *              0             0             1 
+    38 y[m]         *              0             0             1 
+    39 y[n]         *              0             0             1 
+    40 y[o]         *              0             0             1 
+    41 y[p]         *              0             0             1 
+    42 y[q]         *              0             0             1 
+    43 y[r]         *              0             0             1 
+    44 y[s]         *              0             0             1 
+    45 y[t]         *              0             0             1 
+    46 y[u]         *              0             0             1 
+    47 y[v]         *              0             0             1 
+    48 y[w]         *              0             0             1 
+    49 y[x]         *              1             0             1 
+    50 y[y]         *              0             0             1 
+    51 spost                    2.92             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

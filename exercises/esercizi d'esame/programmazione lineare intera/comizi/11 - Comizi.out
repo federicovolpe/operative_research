@@ -1,0 +1,341 @@
+Problem:    11
+Rows:       109
+Columns:    108 (100 integer, 100 binary)
+Non-zeros:  560
+Status:     INTEGER OPTIMAL
+Objective:  z = 5960 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 UnComizioX[A]
+                                   0                           1 
+     2 UnComizioX[B]
+                                   0                           1 
+     3 UnComizioX[C]
+                                   0                           1 
+     4 UnComizioX[D]
+                                   1                           1 
+     5 UnComizioX[E]
+                                   1                           1 
+     6 UnComizioX[F]
+                                   0                           1 
+     7 UnComizioX[G]
+                                   1                           1 
+     8 UnComizioX[H]
+                                   0                           1 
+     9 UnComizioX[I]
+                                   0                           1 
+    10 UnComizioX[J]
+                                   1                           1 
+    11 UnComizioX[K]
+                                   0                           1 
+    12 UnComizioX[L]
+                                   0                           1 
+    13 UnComizioX[M]
+                                   1                           1 
+    14 UnComizioX[N]
+                                   0                           1 
+    15 UnComizioX[O]
+                                   0                           1 
+    16 UnComizioX[P]
+                                   0                           1 
+    17 UnComizioX[Q]
+                                   0                           1 
+    18 UnComizioX[R]
+                                   1                           1 
+    19 UnComizioX[S]
+                                   0                           1 
+    20 UnComizioX[T]
+                                   0                           1 
+    21 UnComizioX[U]
+                                   0                           1 
+    22 UnComizioX[V]
+                                   0                           1 
+    23 UnComizioX[W]
+                                   0                           1 
+    24 UnComizioX[X]
+                                   1                           1 
+    25 UnComizioX[Y]
+                                   1                           1 
+    26 UnComizioY[A]
+                                   0                           1 
+    27 UnComizioY[B]
+                                   0                           1 
+    28 UnComizioY[C]
+                                   0                           1 
+    29 UnComizioY[D]
+                                   1                           1 
+    30 UnComizioY[E]
+                                   1                           1 
+    31 UnComizioY[F]
+                                   0                           1 
+    32 UnComizioY[G]
+                                   1                           1 
+    33 UnComizioY[H]
+                                   0                           1 
+    34 UnComizioY[I]
+                                   0                           1 
+    35 UnComizioY[J]
+                                   1                           1 
+    36 UnComizioY[K]
+                                   0                           1 
+    37 UnComizioY[L]
+                                   0                           1 
+    38 UnComizioY[M]
+                                   1                           1 
+    39 UnComizioY[N]
+                                   0                           1 
+    40 UnComizioY[O]
+                                   0                           1 
+    41 UnComizioY[P]
+                                   0                           1 
+    42 UnComizioY[Q]
+                                   0                           1 
+    43 UnComizioY[R]
+                                   1                           1 
+    44 UnComizioY[S]
+                                   0                           1 
+    45 UnComizioY[T]
+                                   0                           1 
+    46 UnComizioY[U]
+                                   0                           1 
+    47 UnComizioY[V]
+                                   0                           1 
+    48 UnComizioY[W]
+                                   0                           1 
+    49 UnComizioY[X]
+                                   1                           1 
+    50 UnComizioY[Y]
+                                   1                           1 
+    51 TempoComiziX                0            -0             = 
+    52 TempoComiziY                0            -0             = 
+    53 TempoFissoX                 0            -0             = 
+    54 TempoFissoY                 0            -0             = 
+    55 TempoViaggioX[A]
+                                 298            -0               
+    56 TempoViaggioX[B]
+                                 298            -0               
+    57 TempoViaggioX[C]
+                                 298            -0               
+    58 TempoViaggioX[D]
+                                 267            -0               
+    59 TempoViaggioX[E]
+                                 252            -0               
+    60 TempoViaggioX[F]
+                                 298            -0               
+    61 TempoViaggioX[G]
+                                 226            -0               
+    62 TempoViaggioX[H]
+                                 298            -0               
+    63 TempoViaggioX[I]
+                                 298            -0               
+    64 TempoViaggioX[J]
+                                 171            -0               
+    65 TempoViaggioX[K]
+                                 298            -0               
+    66 TempoViaggioX[L]
+                                 298            -0               
+    67 TempoViaggioX[M]
+                                 132            -0               
+    68 TempoViaggioX[N]
+                                 298            -0               
+    69 TempoViaggioX[O]
+                                 298            -0               
+    70 TempoViaggioX[P]
+                                 298            -0               
+    71 TempoViaggioX[Q]
+                                 298            -0               
+    72 TempoViaggioX[R]
+                                  80            -0               
+    73 TempoViaggioX[S]
+                                 298            -0               
+    74 TempoViaggioX[T]
+                                 298            -0               
+    75 TempoViaggioX[U]
+                                 298            -0               
+    76 TempoViaggioX[V]
+                                 298            -0               
+    77 TempoViaggioX[W]
+                                 298            -0               
+    78 TempoViaggioX[X]
+                                   6            -0               
+    79 TempoViaggioX[Y]
+                                   0            -0               
+    80 TempoViaggioY[A]
+                                 300            -0               
+    81 TempoViaggioY[B]
+                                 300            -0               
+    82 TempoViaggioY[C]
+                                 300            -0               
+    83 TempoViaggioY[D]
+                                  33            -0               
+    84 TempoViaggioY[E]
+                                  48            -0               
+    85 TempoViaggioY[F]
+                                 300            -0               
+    86 TempoViaggioY[G]
+                                  74            -0               
+    87 TempoViaggioY[H]
+                                 300            -0               
+    88 TempoViaggioY[I]
+                                 300            -0               
+    89 TempoViaggioY[J]
+                                 129            -0               
+    90 TempoViaggioY[K]
+                                 300            -0               
+    91 TempoViaggioY[L]
+                                 300            -0               
+    92 TempoViaggioY[M]
+                                 168            -0               
+    93 TempoViaggioY[N]
+                                 300            -0               
+    94 TempoViaggioY[O]
+                                 300            -0               
+    95 TempoViaggioY[P]
+                                 300            -0               
+    96 TempoViaggioY[Q]
+                                 300            -0               
+    97 TempoViaggioY[R]
+                                 220            -0               
+    98 TempoViaggioY[S]
+                                 300            -0               
+    99 TempoViaggioY[T]
+                                 300            -0               
+   100 TempoViaggioY[U]
+                                 300            -0               
+   101 TempoViaggioY[V]
+                                 300            -0               
+   102 TempoViaggioY[W]
+                                 300            -0               
+   103 TempoViaggioY[X]
+                                 294            -0               
+   104 TempoViaggioY[Y]
+                                 300            -0               
+   105 TempoTotaleX            958.8                         960 
+   106 TempoTotaleY              960                         960 
+   107 ElettoriX                   0            -0             = 
+   108 ElettoriY                   0            -0             = 
+   109 z                        5960                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[A,1]       *              0             0             1 
+     2 x[A,2]       *              0             0             1 
+     3 x[B,1]       *              0             0             1 
+     4 x[B,2]       *              0             0             1 
+     5 x[C,1]       *              0             0             1 
+     6 x[C,2]       *              0             0             1 
+     7 x[D,1]       *              1             0             1 
+     8 x[D,2]       *              0             0             1 
+     9 x[E,1]       *              1             0             1 
+    10 x[E,2]       *              0             0             1 
+    11 x[F,1]       *              0             0             1 
+    12 x[F,2]       *              0             0             1 
+    13 x[G,1]       *              1             0             1 
+    14 x[G,2]       *              0             0             1 
+    15 x[H,1]       *              0             0             1 
+    16 x[H,2]       *              0             0             1 
+    17 x[I,1]       *              0             0             1 
+    18 x[I,2]       *              0             0             1 
+    19 x[J,1]       *              1             0             1 
+    20 x[J,2]       *              0             0             1 
+    21 x[K,1]       *              0             0             1 
+    22 x[K,2]       *              0             0             1 
+    23 x[L,1]       *              0             0             1 
+    24 x[L,2]       *              0             0             1 
+    25 x[M,1]       *              1             0             1 
+    26 x[M,2]       *              0             0             1 
+    27 x[N,1]       *              0             0             1 
+    28 x[N,2]       *              0             0             1 
+    29 x[O,1]       *              0             0             1 
+    30 x[O,2]       *              0             0             1 
+    31 x[P,1]       *              0             0             1 
+    32 x[P,2]       *              0             0             1 
+    33 x[Q,1]       *              0             0             1 
+    34 x[Q,2]       *              0             0             1 
+    35 x[R,1]       *              0             0             1 
+    36 x[R,2]       *              1             0             1 
+    37 x[S,1]       *              0             0             1 
+    38 x[S,2]       *              0             0             1 
+    39 x[T,1]       *              0             0             1 
+    40 x[T,2]       *              0             0             1 
+    41 x[U,1]       *              0             0             1 
+    42 x[U,2]       *              0             0             1 
+    43 x[V,1]       *              0             0             1 
+    44 x[V,2]       *              0             0             1 
+    45 x[W,1]       *              0             0             1 
+    46 x[W,2]       *              0             0             1 
+    47 x[X,1]       *              0             0             1 
+    48 x[X,2]       *              1             0             1 
+    49 x[Y,1]       *              1             0             1 
+    50 x[Y,2]       *              0             0             1 
+    51 y[A,1]       *              0             0             1 
+    52 y[A,2]       *              0             0             1 
+    53 y[B,1]       *              0             0             1 
+    54 y[B,2]       *              0             0             1 
+    55 y[C,1]       *              0             0             1 
+    56 y[C,2]       *              0             0             1 
+    57 y[D,1]       *              1             0             1 
+    58 y[D,2]       *              0             0             1 
+    59 y[E,1]       *              1             0             1 
+    60 y[E,2]       *              0             0             1 
+    61 y[F,1]       *              0             0             1 
+    62 y[F,2]       *              0             0             1 
+    63 y[G,1]       *              1             0             1 
+    64 y[G,2]       *              0             0             1 
+    65 y[H,1]       *              0             0             1 
+    66 y[H,2]       *              0             0             1 
+    67 y[I,1]       *              0             0             1 
+    68 y[I,2]       *              0             0             1 
+    69 y[J,1]       *              1             0             1 
+    70 y[J,2]       *              0             0             1 
+    71 y[K,1]       *              0             0             1 
+    72 y[K,2]       *              0             0             1 
+    73 y[L,1]       *              0             0             1 
+    74 y[L,2]       *              0             0             1 
+    75 y[M,1]       *              1             0             1 
+    76 y[M,2]       *              0             0             1 
+    77 y[N,1]       *              0             0             1 
+    78 y[N,2]       *              0             0             1 
+    79 y[O,1]       *              0             0             1 
+    80 y[O,2]       *              0             0             1 
+    81 y[P,1]       *              0             0             1 
+    82 y[P,2]       *              0             0             1 
+    83 y[Q,1]       *              0             0             1 
+    84 y[Q,2]       *              0             0             1 
+    85 y[R,1]       *              0             0             1 
+    86 y[R,2]       *              1             0             1 
+    87 y[S,1]       *              0             0             1 
+    88 y[S,2]       *              0             0             1 
+    89 y[T,1]       *              0             0             1 
+    90 y[T,2]       *              0             0             1 
+    91 y[U,1]       *              0             0             1 
+    92 y[U,2]       *              0             0             1 
+    93 y[V,1]       *              0             0             1 
+    94 y[V,2]       *              0             0             1 
+    95 y[W,1]       *              0             0             1 
+    96 y[W,2]       *              0             0             1 
+    97 y[X,1]       *              0             0             1 
+    98 y[X,2]       *              1             0             1 
+    99 y[Y,1]       *              1             0             1 
+   100 y[Y,2]       *              0             0             1 
+   101 Tfx                       240                             
+   102 Tfy                       240                             
+   103 Tcx                       540                             
+   104 Tcy                       540                             
+   105 Tvx                     178.8                             
+   106 Tvy                       180                             
+   107 zX                       2980                             
+   108 zY                       2980                             
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 4.55e-13 on row 52
+        max.rel.err = 4.55e-13 on row 52
+        High quality
+
+End of output

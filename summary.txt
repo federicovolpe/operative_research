@@ -1,23 +1,129 @@
 PL:
+caramelle: perfetto per l'analisi di sensibilità
 forno : massimizzazione dei guadagni con diverse produzioni
 cuori solitari: massimizzazione del minimo di una matrice doppia
 merendine: massimizzazione del guadagno semplice produzione
+pesce: 
 tulipani: massimizzazione del guadagno dividendo un terreno in striscie e diverse aree (non riuscito)
 chiatte: massimizzazione di due flussi in due direzioni
 feriti: 
+detersivi : vincoli sulle percentuali di utilizzo per massimizzare la produzione
+cloud: analisi parametrica sulla convenienza di differenti contratti con costo fisso e costo variabile
+zoo : trovare il costo minimo per soddisfare tutti gli animali
 
 PLI:
+antitrust: minmax di un valore assoluto
 containers: data la capacità di diverse knapsack utilizzare il minor numero di knapsack per contenere tutti gli oggetti 
 editoria : ad ogni knapsack attribuire un numero intero di elementi
-lamine : esercizio non riuscito, knapsack per n knapsack
 immagini: bin packing eventi incompatibili per sovrapposizione
-antitrust: minmax di un valore assoluto
-sfilata: calcolo del percorso ottimale (non riuscito)
+lamine : esercizio non riuscito, knapsack per n knapsack
 linear ordering: calcolo del percorso che attraversa tutti i nodi di un grafo
+numero esatto: trovare un numero con tot posizioni dato che si hanno diversi indizi
 percorso : cammino minimo fra nodi (conservazione di flusso, impostazione del nodo iniziale e finale)
-sfilata: cammino con costo minore del grafico con punto di fine e inizio
 ring loading: calibrare il traffico in un anello (in entrambe le direzioni)
+sfilata: cammino con costo minore del grafico con punto di fine e inizio
+scheduling : differenti eventi ordinati in modo che non si sovrappongano
+sudoku : risoluzione di un sudoku
 
 PNL:
+artiglieria: massimizzare l'area coperta da due parabole (equazioni moto accelerato gravità)
+cerchio: minimizzazione della distanza dalla circonferenza
+classificatore: retta che separa meglio i due tipi di punti nel grafico (variabili binarie per l'errore)
+elettrodotto: rappresentazione di un grafo come albero (minimizzazione delle varie distanze)
+passerelle: minimizzare il numero di passserelle utilizzate per collegare dei punti
+piattello : trovare la parabola che raggiunge il punto ymax con la minima velocità iniziale
 prezzi : massimizzazione di guadagni di prodotti differenti
 ragno: minimizzazione del filo utilizzato per la costruzione di un'area
+rettangolo: rettangolo che includa un insieme di punti
+resistenze: posizionamento de alcune resistenze (guardare quello del prof)
+spin glass: minimizzazione dell'energia complessiva di un sistema
+tunnel: minimizzazione delle distanze dei punti da una retta
+tripartizione: divisione di un insieme di punti 
+
+
+------------------------------------- vincoli importanti: -----------------------------------
+- vincolo di conservazione del flusso (programmazione multi periodo)
+	le scorte del periodo precedente piu la produzione deve equivalere 
+	la domanda del mese corrente e le scorte del mese corrente
+
+- vincoli di normalizzazione delle rette
+- vincoli di imposizione direzione delle rette
+- calcolo della distanza retta punto:
+	(A[x del punto] + B[y del punto] + c) / sqrt(A^2 + B^2)
+	siccome normalizziamo sempre la retta il denominatore sarà uguale a 1 quindi ne possiamo fare a meno
+	A[x del punto] + B[y del punto] + c
+- imposizione retta passa per il punto(x y)
+	(a * x) + (b * y) + c = 0
+- il punto p deve stare da un lato della retta (tripartizione)
+	(a * x[p]) + (b * y[p]) + c <= 0
+- equazioni del moto uniforme uniforme accelerato
+	x(t) = vel * cos(θ) * tempo
+	y(t) = (vel * sin(θ)) - (g * tempo)
+- ortogonalità di due rette (rettangolo)
+	(a[r1] * a[r2]) + (b[r1] * b[r2]) = 0
+- direzione di due rette opposta (rettangolo)
+	a[r1] = -a[r2];
+	b[r1] = -b[r2];
+- ammissione di n errori con variabile binaria (classificatore)
+	(a * x[p]) + (b * y[p]) + c <= - delta + M * err[p];
+- parametri della parabola
+c = punto di intersezione con l'asse y
+a = ampiezza della parabola (positiva verso il basso)
+b = linea di simmetria della parabola
+
+
+------------------------------------- opzioni knitro ---------------------------------------
+knitro va in multithreading (default).
+Quindi basta mettere 
+option knitro_options 'threads=1';
+
+per limitare l'output di knitro: 
+option knitro_options 'outlev=0';
+
+
+------------------------------------ analisi parametrica ------------------------------------------
+#	lettura del file di out		##########################################
+
+
+#	lettura del file di sensibilità ##########################################
+- tabella dei vincoli
+st : 	BS = variabile in base (la risorsa non è stata consumata del tutto)
+	NB = variabile fuori base (la variabile è stata consumata del tutto)
+Activity : quanto di quell a è stata consumata
+Slack marginal: sopra lo slack, sotto il prezzo ombra (quanto dovrebbe aumentare per essere conveniente utilizzarlo)
+Lower bound upper bound : nulla di interessante
+Activity range: quanto può variare il membro di quel vincolo senza che cambi la soluzione ottima (b)
+Obj coef range: coefficiente cj (quanto  può variare il coefficiente della funzione obiettivo prima che cambi la soluzione)
+obj val. at limiting break point.. : valori dell'obiettivo quando si arriva ai margini dell'activity range
+
+- tabella delle variabili
+st : se la variabile è in base o no
+activity: quanto di quella variabile è stato utilizzato
+obj coef marginal: sopra il dato, sotto 0 è il costo ridotto se la variabile è in base (di quanto diminuirebbe l'obiettivo se si producesse una unità di quella variabile)
+upper lower: nulla di interessant
+activity range: di quanto può salire l'activity senza variare al soluzione ottima
+obj coef range: quanto pu0 variare il coefficiente corrispettivo nell'obiettivo
+obj value at break...: il valore della funzione obiettivo nei punti dove il COEFFICIENTE DELL'OBIETTIVO cambia
+
+###################################################    domande possibili :
+discutere l'ottimalità della soluzione:
+	la soluzione ottima è unica o meno (se almeno una delle variabili NL ha object coef marginal = 0 la soluzione non è unica)
+
+tutti i prodotti sono convenienti da produrre ?: 
+	se una variabile ha obj coef marginal negativo allora sarà non conveniente da produrre
+
+quale dovrebbe essere il prezzo di vendita per rendere conveniente una variabile?
+	dove al punto precedente è negativo indica quanto dovrebbe aumentare il coefficiente della variabile
+	si ritrova il risultato nel obj coef range (il quanto dovrebbe essere il coefficiente)
+
+per quali oscillazioni un prodotto conveniente rimane conveniente?
+	
+quale prodotto è più robusto al cambiamento ?
+	dei prodotti convenienti bisogna guardare il obj coef range, quello che ha i due valori più distanti è quello più robusto
+
+di quanto possono essere ridotte le risorse necessarie a trovare la soluzione ottima?
+	bisogna guardare lo slack delle risorse in base (il valore(che dovrebbe essere sopra) indica l'eccedenza)
+
+quali prezzi è conveniente variare per ciascuna risorsa ?
+	sarà conveniente variare il prezzo delle variabili NU, quelle consumate del tutto 
+	bisogna fare l'analisi parametrica e vedere fino a quando obj coef marginal rimane maggiore di 1

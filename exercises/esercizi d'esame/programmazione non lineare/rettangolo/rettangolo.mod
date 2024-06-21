@@ -22,7 +22,12 @@ subject to perp0 {l1 in lati, l2 in lati : l2 = (l1 + 1) mod 4} :
 	a[l1]*a[l2] + b[l1]*b[l2] = 0;
 
 # vincoli per la direzione delle rette dato che i punti si dovranno trovare
-# tutti da un lato delle rette
+# versione breve (una volta per la a e una volta per la b)
+subject to verso_a {r1 in lati, r2 in lati: r1 = (r2+2) mod 4}:
+	a[r1] = -a[r2];
+subject to verso_a {r1 in lati, r2 in lati: r1 = (r2+2) mod 4}:
+	b[r1] = -b[r2];
+# versione estesa
 subject to dir1 :
 	a[0] = -a[2];
 subject to dir2 :

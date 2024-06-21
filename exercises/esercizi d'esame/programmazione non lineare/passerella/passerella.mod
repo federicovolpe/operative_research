@@ -11,14 +11,17 @@ param x {vicoli};
 param y {vicoli};
 
 #	VARIABILI
-var xpiat {piat};
+var xpiat {piat};	# coordinate delle piattaforme
 var ypiat {piat};
 
-var assign {vicoli, piat} binary;
- 
+# collegamento per ogni vicolo-piattaforma
+var assign {vicoli, piat} binary; 
+
+# distanza per ogni vicolo - piattaforma
 var distanze {v in vicoli, p in piat} = 
 	sqrt((x[v] - xpiat[p])^2 + (y[v] - ypiat[p])^2);
 	
+# distanza fra ogni piattaforma e la precedente
 var distp {p in piat : p > 1} = 
 	sqrt((xpiat[p] - xpiat[p-1])^2 + (ypiat[p] - ypiat[p-1])^2);
 

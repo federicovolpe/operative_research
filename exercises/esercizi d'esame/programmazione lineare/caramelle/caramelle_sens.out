@@ -1,0 +1,128 @@
+GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    caramelle
+Objective:  z = 310.802 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 limite_scorte[Fruttosio]
+                    NU        .             .               -Inf        -.65800      -4.00000     308.17000 consumo[Fruttosio]
+                                           4.00000        .             8.34200          +Inf     344.17000 consumo[Fruttosio]
+
+     2 limite_scorte[Saccarosio]
+                    NU        .             .               -Inf       -1.41000      -2.00000     307.98200 consumo[Saccarosio]
+                                           2.00000        .             3.59000          +Inf     317.98200 consumo[Saccarosio]
+
+     3 limite_scorte[Glucosio]
+                    NU        .             .               -Inf       -7.10000     -12.12000     224.75000 consumo[Conservanti]
+                                          12.12000        .             5.86875          +Inf     381.93125 consumo[Destrosio]
+
+     4 limite_scorte[Destrosio]
+                    NU        .             .               -Inf       -3.75600      -3.50000     297.65600 consumo[Destrosio]
+                                           3.50000        .            14.24400          +Inf     360.65600 consumo[Destrosio]
+
+     5 limite_scorte['Estratti di erbe']
+                    NU        .             .               -Inf      -10.50800      -8.00000     226.73800 consumo['Estratti di erbe']
+                                           8.00000        .             9.49200          +Inf     386.73800 consumo['Estratti di erbe']
+
+     6 limite_scorte['Estratti di frutta']
+                    NU        .             .               -Inf      -11.02353     -14.41000     151.95294 prodotte[Slurp]
+                                          14.41000        .             5.98182          +Inf     397.00000 consumo[Fruttosio]
+
+     7 limite_scorte[Coloranti]
+                    NU        .             .               -Inf       -5.04706      -2.73000     297.02353 prodotte[Sweety]
+                                           2.73000        .              .83529          +Inf     313.08235 consumo[Conservanti]
+
+     8 limite_scorte[Conservanti]
+                    NU        .             .               -Inf        -.56800      -5.00000     307.96200 consumo[Conservanti]
+                                           5.00000        .            11.93200          +Inf     370.46200 consumo[Conservanti]
+
+     9 limite_scorte[Aromatizzanti]
+                    NU        .             .               -Inf        -.80000      -6.00000     306.00200 consumo[Aromatizzanti]
+                                           6.00000        .             9.20000          +Inf     366.00200 consumo[Aromatizzanti]
+
+    10 z            BS     310.80200    -310.80200          -Inf      309.18691      -1.00000        .      prodotte[Dolce]
+                                            .               +Inf      310.80200          +Inf          +Inf
+
+GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    caramelle
+Objective:  z = 310.802 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 prodotte[Dolce]
+                    NL        .            5.00000        .           -17.95000          -Inf     322.91825 consumo[Saccarosio]
+                                           -.67500          +Inf        2.39273       5.67500     309.18691 consumo[Fruttosio]
+
+     2 prodotte[Delizia]
+                    NL        .            4.00000        .           -11.67480          -Inf     339.71463 consumo[Saccarosio]
+                                          -2.47650          +Inf        4.58537       6.47650     299.44634 consumo[Saccarosio]
+
+     3 prodotte[Bacetto]
+                    BS      57.56000       8.00000        .            56.36364       6.65000     233.09600 prodotte[Dolce]
+                                            .               +Inf       60.58824       9.21667     380.83333 consumo[Coloranti]
+
+     4 prodotte[Golosa]
+                    NL        .            5.00000        .           -44.56338          -Inf     363.58732 consumo['Estratti di erbe']
+                                          -1.18450          +Inf       12.90722       6.18450     295.51340 consumo[Destrosio]
+
+     5 prodotte[Sfizio]
+                    NL        .            6.00000        .           -29.24444          -Inf     360.44444 consumo[Fruttosio]
+                                          -1.69750          +Inf       32.00000       7.69750     256.48200 consumo[Aromatizzanti]
+
+     6 prodotte[Slurp]
+                    BS      37.48000       7.50000        .           -58.40000       6.20294     262.18824 consumo['Estratti di frutta']
+                                            .               +Inf       46.00000      16.76667     658.11667 consumo[Glucosio]
+
+     7 prodotte[Sweety]
+                    BS      17.16000       4.50000        .           -17.71429       4.28529     307.11765 consumo[Coloranti]
+                                            .               +Inf       41.41176       6.50455     345.20000 consumo['Estratti di frutta']
+
+     8 consumo[Fruttosio]
+                    BS       8.34200      -4.00000        .             6.67647      -6.21212     292.34848 consumo[Coloranti]
+                                            .            9.00000       10.28075      -1.54545     331.27782 prodotte[Dolce]
+
+     9 consumo[Saccarosio]
+                    BS       3.59000      -2.00000        .             1.82353      -4.08571     303.31429 consumo[Coloranti]
+                                            .            5.00000           +Inf        .          317.98200 limite_scorte[Saccarosio]
+
+    10 consumo[Glucosio]
+                    NU      20.00000      -1.00000        .            12.90000     -12.12000     231.85000 consumo[Conservanti]
+                                          11.12000      20.00000       25.86875          +Inf     376.06250 consumo[Destrosio]
+
+GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   3
+
+Problem:    caramelle
+Objective:  z = 310.802 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+    11 consumo[Destrosio]
+                    BS      14.24400      -3.50000        .            13.94118     -15.66667     137.50000 consumo[Coloranti]
+                                            .           18.00000           +Inf        .          360.65600 limite_scorte[Destrosio]
+
+    12 consumo['Estratti di erbe']
+                    BS       9.49200      -8.00000        .             9.08824     -17.12500     224.18750 consumo[Coloranti]
+                                            .           20.00000       12.24124      -2.43897     363.58732 prodotte[Golosa]
+
+    13 consumo['Estratti di frutta']
+                    NU      17.00000     -10.00000        .             5.97647     -14.41000     262.18824 prodotte[Slurp]
+                                           4.41000      17.00000       22.98182          +Inf     337.18182 consumo[Fruttosio]
+
+    14 consumo[Coloranti]
+                    NU      18.40000      -2.00000        .            13.35294      -2.73000     307.11765 prodotte[Sweety]
+                                            .73000      18.40000       19.23529          +Inf     311.41176 consumo[Conservanti]
+
+    15 consumo[Conservanti]
+                    BS      11.93200      -5.00000        .             8.50000      -6.07353     297.99265 consumo[Coloranti]
+                                            .           12.50000           +Inf        .          370.46200 limite_scorte[Conservanti]
+
+    16 consumo[Aromatizzanti]
+                    BS       9.20000      -6.00000        .             6.67647      -7.46000     297.37000 consumo[Coloranti]
+                                            .           10.00000           +Inf        .          366.00200 limite_scorte[Aromatizzanti]
+
+End of report

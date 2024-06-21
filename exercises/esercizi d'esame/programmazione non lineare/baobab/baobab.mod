@@ -7,8 +7,8 @@ param maxp := 20.00;			# Prezzo massimo di vendita 					[Euro/Kg]
 
 #	VARIABILI
 var produzione >=0, # radice quadrata della quantità da produrre [Kg/mese]
-<= abs, 	# vincolo: non si può superare la quantità massima da produrre
-:= abs ;											
+			<= abs, 	# vincolo: non si può superare la quantità massima da produrre
+			:= abs ;											
 
 
 #	OBIETTIVO
