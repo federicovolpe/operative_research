@@ -6,39 +6,39 @@ Objective:  z = 310.802 (MAXimum)
    No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
                                           Marginal   Upper bound          range         range   break point variable
 ------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
-     1 limite_scorte[Fruttosio]
+     1 Consumi[Fruttosio]
                     NU        .             .               -Inf        -.65800      -4.00000     308.17000 consumo[Fruttosio]
                                            4.00000        .             8.34200          +Inf     344.17000 consumo[Fruttosio]
 
-     2 limite_scorte[Saccarosio]
+     2 Consumi[Saccarosio]
                     NU        .             .               -Inf       -1.41000      -2.00000     307.98200 consumo[Saccarosio]
                                            2.00000        .             3.59000          +Inf     317.98200 consumo[Saccarosio]
 
-     3 limite_scorte[Glucosio]
+     3 Consumi[Glucosio]
                     NU        .             .               -Inf       -7.10000     -12.12000     224.75000 consumo[Conservanti]
                                           12.12000        .             5.86875          +Inf     381.93125 consumo[Destrosio]
 
-     4 limite_scorte[Destrosio]
+     4 Consumi[Destrosio]
                     NU        .             .               -Inf       -3.75600      -3.50000     297.65600 consumo[Destrosio]
                                            3.50000        .            14.24400          +Inf     360.65600 consumo[Destrosio]
 
-     5 limite_scorte['Estratti di erbe']
+     5 Consumi['Estratti di erbe']
                     NU        .             .               -Inf      -10.50800      -8.00000     226.73800 consumo['Estratti di erbe']
                                            8.00000        .             9.49200          +Inf     386.73800 consumo['Estratti di erbe']
 
-     6 limite_scorte['Estratti di frutta']
+     6 Consumi['Estratti di frutta']
                     NU        .             .               -Inf      -11.02353     -14.41000     151.95294 prodotte[Slurp]
                                           14.41000        .             5.98182          +Inf     397.00000 consumo[Fruttosio]
 
-     7 limite_scorte[Coloranti]
+     7 Consumi[Coloranti]
                     NU        .             .               -Inf       -5.04706      -2.73000     297.02353 prodotte[Sweety]
                                            2.73000        .              .83529          +Inf     313.08235 consumo[Conservanti]
 
-     8 limite_scorte[Conservanti]
+     8 Consumi[Conservanti]
                     NU        .             .               -Inf        -.56800      -5.00000     307.96200 consumo[Conservanti]
                                            5.00000        .            11.93200          +Inf     370.46200 consumo[Conservanti]
 
-     9 limite_scorte[Aromatizzanti]
+     9 Consumi[Aromatizzanti]
                     NU        .             .               -Inf        -.80000      -6.00000     306.00200 consumo[Aromatizzanti]
                                            6.00000        .             9.20000          +Inf     366.00200 consumo[Aromatizzanti]
 
@@ -87,7 +87,7 @@ Objective:  z = 310.802 (MAXimum)
 
      9 consumo[Saccarosio]
                     BS       3.59000      -2.00000        .             1.82353      -4.08571     303.31429 consumo[Coloranti]
-                                            .            5.00000           +Inf        .          317.98200 limite_scorte[Saccarosio]
+                                            .            5.00000           +Inf        .          317.98200 Consumi[Saccarosio]
 
     10 consumo[Glucosio]
                     NU      20.00000      -1.00000        .            12.90000     -12.12000     231.85000 consumo[Conservanti]
@@ -103,7 +103,7 @@ Objective:  z = 310.802 (MAXimum)
 ------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
     11 consumo[Destrosio]
                     BS      14.24400      -3.50000        .            13.94118     -15.66667     137.50000 consumo[Coloranti]
-                                            .           18.00000           +Inf        .          360.65600 limite_scorte[Destrosio]
+                                            .           18.00000           +Inf        .          360.65600 Consumi[Destrosio]
 
     12 consumo['Estratti di erbe']
                     BS       9.49200      -8.00000        .             9.08824     -17.12500     224.18750 consumo[Coloranti]
@@ -119,10 +119,10 @@ Objective:  z = 310.802 (MAXimum)
 
     15 consumo[Conservanti]
                     BS      11.93200      -5.00000        .             8.50000      -6.07353     297.99265 consumo[Coloranti]
-                                            .           12.50000           +Inf        .          370.46200 limite_scorte[Conservanti]
+                                            .           12.50000           +Inf        .          370.46200 Consumi[Conservanti]
 
     16 consumo[Aromatizzanti]
                     BS       9.20000      -6.00000        .             6.67647      -7.46000     297.37000 consumo[Coloranti]
-                                            .           10.00000           +Inf        .          366.00200 limite_scorte[Aromatizzanti]
+                                            .           10.00000           +Inf        .          366.00200 Consumi[Aromatizzanti]
 
 End of report

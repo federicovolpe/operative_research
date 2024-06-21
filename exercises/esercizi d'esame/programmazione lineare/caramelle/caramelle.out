@@ -7,23 +7,23 @@ Objective:  z = 310.802 (MAXimum)
 
    No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
 ------ ------------ -- ------------- ------------- ------------- -------------
-     1 limite_scorte[Fruttosio]
+     1 Consumi[Fruttosio]
                     NU             0                          -0             4 
-     2 limite_scorte[Saccarosio]
+     2 Consumi[Saccarosio]
                     NU             0                          -0             2 
-     3 limite_scorte[Glucosio]
+     3 Consumi[Glucosio]
                     NU             0                          -0         12.12 
-     4 limite_scorte[Destrosio]
+     4 Consumi[Destrosio]
                     NU             0                          -0           3.5 
-     5 limite_scorte['Estratti di erbe']
+     5 Consumi['Estratti di erbe']
                     NU             0                          -0             8 
-     6 limite_scorte['Estratti di frutta']
+     6 Consumi['Estratti di frutta']
                     NU             0                          -0         14.41 
-     7 limite_scorte[Coloranti]
+     7 Consumi[Coloranti]
                     NU             0                          -0          2.73 
-     8 limite_scorte[Conservanti]
+     8 Consumi[Conservanti]
                     NU             0                          -0             5 
-     9 limite_scorte[Aromatizzanti]
+     9 Consumi[Aromatizzanti]
                     NU             0                          -0             6 
     10 z            B        310.802                             
 

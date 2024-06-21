@@ -13,7 +13,7 @@ var consumo {i in ingredienti} >=0, <= disponibilita[i];
 
 # VINCOLI
 #1 non eccedere gli ingredienti disponibili per la produzione
-subject to limite_scorte {i in ingredienti} :
+subject to Consumi {i in ingredienti} :
 	sum {c in caramelle} proporzioni[i,c]/100 * prodotte[c] <= consumo[i];
 
 # OBIETTIVO
